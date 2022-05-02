@@ -19,7 +19,7 @@ function CartContainer() {
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>
-                 <button className='btn2'>Add to cart</button>
+                 <button className='btn2'>View Item</button>
                </div>
              </div>
              <div className="col-md-3">
@@ -29,7 +29,7 @@ function CartContainer() {
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>
-                 <button className='btn2'>Add to cart</button>
+                 <button className='btn2'>View Item</button>
                </div>
              </div>
              <div className="col-md-3">
@@ -39,7 +39,7 @@ function CartContainer() {
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>
-                 <button className='btn2'>Add to cart</button>
+                 <button className='btn2'>View Item</button>
                </div>
              </div>
              <div className="col-md-3">
@@ -49,7 +49,7 @@ function CartContainer() {
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>
-                 <button className='btn2'>Add to cart</button>
+                 <button className='btn2'>View Item</button>
                </div>
              </div>
            </div>
