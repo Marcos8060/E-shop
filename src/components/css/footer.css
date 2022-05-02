@@ -1,0 +1,10 @@
+.app__footer{
+    background: var(--primary);
+    color: white;
+    font-family: poppins;
+    padding-top: 8vh;
+    padding-bottom: 7vh;
+}
+.logo__footer{
+    font-weight: bold;
+}
