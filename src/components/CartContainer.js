@@ -15,7 +15,7 @@ function CartContainer() {
              <div className="col-md-3">
                <div className="card">
                  <img className='img-fluid item_img' src={denim} alt="" />
-                 <div className='d-flex justify-content-between'>
+                 <div className='d-flex justify-content-around'>
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>
@@ -25,7 +25,7 @@ function CartContainer() {
              <div className="col-md-3">
                <div className="card">
                  <img className='img-fluid item_img' src={shirt} alt="" />
-                 <div className='d-flex justify-content-between'>
+                 <div className='d-flex justify-content-around'>
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>
@@ -35,7 +35,7 @@ function CartContainer() {
              <div className="col-md-3">
                <div className="card">
                  <img className='img-fluid item_img' src={shoe} alt="" />
-                 <div className='d-flex justify-content-between'>
+                 <div className='d-flex justify-content-around'>
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>
@@ -45,7 +45,7 @@ function CartContainer() {
              <div className="col-md-3">
                <div className="card">
                  <img className='img-fluid item_img' src={watch} alt="" />
-                 <div className='d-flex justify-content-between'>
+                 <div className='d-flex justify-content-around'>
                     <span>Denim Jacket</span>
                     <span>$30</span>
                  </div>

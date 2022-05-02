@@ -1,0 +1,8 @@
+.app__soon{
+    background: var(--secondary);
+    padding: 20px;
+    font-family: poppins;
+}
+.coming{
+    font-weight: bold;
+}
