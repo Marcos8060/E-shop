@@ -1,5 +1,6 @@
 import './App.css';
 import CartContainer from './components/CartContainer';
+import Flash from './components/Flash';
 import Hero from './components/Hero';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Hero />
       <CartContainer />
+      <Flash />
     </div>
   );
 }

@@ -1,0 +1,4 @@
+.app__flash{
+    background: var(--secondary);
+    padding: 20px;
+}
