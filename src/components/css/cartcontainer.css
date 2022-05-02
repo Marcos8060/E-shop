@@ -1,0 +1,31 @@
+.app__cartContainer{
+    background: var(--secondary);
+    padding-top: 10vh;
+    font-family: poppins;
+}
+.card{
+    padding: 10px;
+    margin-bottom: 4vh;
+    height: 400px;
+    box-shadow: 0px 1px 14px 1px lightgray;
+}
+.item_img{
+    height: 270px;
+    width: 270px;
+    margin: auto;
+}
+.btn2{
+    border: 1px solid var(--buttons);
+    background: transparent;
+    color: var(--buttons);
+    width: 50%;
+    margin: auto;
+    font-weight: 600;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.btn2:hover{
+    background: var(--buttons);
+    transition: 1s;
+    color: white;
+}
