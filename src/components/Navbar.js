@@ -1,17 +1,16 @@
-import React from 'react'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import MenuIcon from '@material-ui/icons/Menu';
-import './css/navbar.css'
-
+import React from "react";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import MenuIcon from "@material-ui/icons/Menu";
+import "./css/navbar.css";
 
 function Navbar() {
   return (
     <>
-     <div className="app__navbar">
-     <nav className="navbar navbar-expand-lg fixed-top">
+      <div className="app__navbar">
+        <nav className="navbar navbar-expand-lg fixed-top">
           <div className="container">
             <a className="navbar-brand" href="#">
-               <span className='logo'>E</span>-shop
+              <span className="logo">E</span>-shop
             </a>
             <button
               className="navbar-toggler"
@@ -22,10 +21,13 @@ function Navbar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-                <MenuIcon className='menu' />
+              <MenuIcon className="menu" />
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -37,7 +39,10 @@ function Navbar() {
                   >
                     Categories
                   </a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
                     <li>
                       <a className="dropdown-item" href="#">
                         Action
@@ -55,21 +60,21 @@ function Navbar() {
                     </li>
                   </ul>
                 </li>
-                </ul>
+              </ul>
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                  <ShoppingCartIcon />
-                  <span className='quantity'>2</span>
+                    <ShoppingCartIcon />
+                    <span className="quantity">2</span>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-     </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
