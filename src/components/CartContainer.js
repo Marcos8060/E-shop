@@ -8,7 +8,6 @@ import axios from "axios";
 import Loading from "./Loading";
 import { Link } from 'react-router-dom'
 
-const url = `http://127.0.0.1:8000/api/items/`;
 function CartContainer() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
