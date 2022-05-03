@@ -13,13 +13,21 @@ function CartContainer() {
   const [loading,setLoading] = useState(true)
 
   useEffect(() =>{
+    setLoading(true)
     const getItems = async() =>{
       const result = await axios.get(url)
       setItems(result.data)
       console.log(result.data);
+      setLoading(false)
     }
     getItems();
   },[])
+
+  if(loading){
+    return(
+      <Loading />
+    )
+  }
   return (
     <>
       <div className="app__cartContainer">
