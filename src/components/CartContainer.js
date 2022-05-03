@@ -6,6 +6,7 @@ import watch from "../images/watch.png";
 import "./css/cartcontainer.css";
 import axios from "axios";
 import Loading from "./Loading";
+import { Link } from 'react-router-dom'
 
 const url = `http://127.0.0.1:8000/api/items/`;
 function CartContainer() {
@@ -39,7 +40,7 @@ function CartContainer() {
                     <span>{item.name}</span>
                     <span>${item.price}</span>
                   </div>
-                  <button className="btn2">View Item</button>
+                  <a href={"detail/" + item.id}><button className="btn2">View Item</button></a>
                 </div>
               </div>
             ))}

@@ -15,7 +15,7 @@ root.render(
       <Navbar />
       <Routes>
         <Route exact path="/" element={<App />}></Route>
-        <Route exact path="/detail" element={<Detail />}></Route>
+        <Route exact path="/detail/:id/" element={<Detail />}></Route>
         <Route exact path="/cart" element={<Cart />}></Route>
         <Route exact path="/" element={<App />}></Route>
       </Routes>
