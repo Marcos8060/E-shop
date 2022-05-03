@@ -1,4 +1,5 @@
 import './App.css';
+import Cart from './components/Cart';
 import CartContainer from './components/CartContainer';
 import Detail from './components/Detail';
 import Flash from './components/Flash';
@@ -15,6 +16,7 @@ function App() {
       <Soon />
       <Footer />
       <Detail />
+      <Cart />
     </div>
   );
 }
