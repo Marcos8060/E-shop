@@ -7,21 +7,24 @@ import Navbar from "./components/Navbar";
 import Detail from "./components/Detail";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import { AppProvider } from "./context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Router>
-    <React.StrictMode>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<App />}></Route>
-        <Route exact path="/detail/:id/" element={<Detail />}></Route>
-        <Route exact path="/cart" element={<Cart />}></Route>
-        <Route exact path="/" element={<App />}></Route>
-      </Routes>
-      <Footer />
-    </React.StrictMode>
-  </Router>
+  <AppProvider>
+    <Router>
+      <React.StrictMode>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<App />}></Route>
+          <Route exact path="/detail/:id/" element={<Detail />}></Route>
+          <Route exact path="/cart" element={<Cart />}></Route>
+          <Route exact path="/" element={<App />}></Route>
+        </Routes>
+        <Footer />
+      </React.StrictMode>
+    </Router>
+  </AppProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
