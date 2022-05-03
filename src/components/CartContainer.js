@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import denim from '../images/denim.png'
 import shirt from '../images/shirt.png'
 import shoe from '../images/shoe.png'
 import watch from '../images/watch.png'
 import './css/cartcontainer.css'
+import axios from 'axios'
 
 
 function CartContainer() {
