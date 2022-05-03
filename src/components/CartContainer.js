@@ -3,7 +3,15 @@ import "./css/cartcontainer.css";
 import { useGlobalContext } from "../context";
 
 function CartContainer() {
-  const { cart } = useGlobalContext()
+  const { cart, loading } = useGlobalContext()
+
+  if(loading){
+    return (
+      <div className="loading">
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
 
   return (
     <>

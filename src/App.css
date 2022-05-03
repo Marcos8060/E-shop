@@ -11,3 +11,9 @@
   --secondary: #F6F9FC;
   --cart: #6F7072;
 }
+.loading{
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  text-align: center;
+  font-family: poppins;
+}

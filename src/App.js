@@ -4,6 +4,7 @@ import Flash from './components/Flash';
 import Hero from './components/Hero';
 import Soon from './components/Soon';
 
+
 function App() {
   return (
     <div className="App">
