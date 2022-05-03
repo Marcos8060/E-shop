@@ -1,9 +1,9 @@
 .app__detail{
     background: var(--secondary);
     padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-bottom: 17vh;
     font-family: poppins;
-    margin-bottom: 10vh;
+    margin-top: 10vh;
 }
 .title{
     font-weight: 700;
