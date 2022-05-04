@@ -6,6 +6,7 @@ import StarHalfIcon from '@material-ui/icons/StarHalf';
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useGlobalContext } from "../context";
+import Footer from "./Footer";
 
 
 function Detail() {
@@ -39,11 +40,12 @@ function Detail() {
               <p>Rated:  <StarIcon className="star"/> <StarIcon className="star"/> <StarIcon className="star"/> <StarIcon className="star"/> <StarHalfIcon className="star"/></p>
               <h3 className="price">${item.price}</h3>
               <p>Stock available</p>
-              <button onClick={() => addToCart(item.id)} className="btn3">Add to cart</button>
+              <a href="/" className="btn btn3">Back to shop</a>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

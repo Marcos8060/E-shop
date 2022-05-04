@@ -4,6 +4,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useGlobalContext } from "../context";
 import "./css/cartcontainer.css";
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import { Link } from 'react-router-dom'
 
 
 function CartItem({ id, image, name, price, amount }) {
@@ -14,7 +15,9 @@ function CartItem({ id, image, name, price, amount }) {
         <div className="d-flex justify-content-around align-items-center">
           <span>{name}</span>
           <span>${price}</span>
-          <VisibilityIcon className="see" />
+          <a href={"detail/" + id}>
+            <VisibilityIcon className="see" />
+          </a>
         </div>
         <div className="d-flex align-items-center justify-content-center">
           <ExpandLessIcon
