@@ -5,9 +5,11 @@ import StarIcon from '@material-ui/icons/Star';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useGlobalContext } from "../context";
 
 
 function Detail() {
+  const { addToCart } = useGlobalContext();
   const [item,setItem] = useState([])
   const { id } = useParams();
   const url = `http://127.0.0.1:8000/api/items/${id}/`
@@ -37,7 +39,7 @@ function Detail() {
               <p>Rated:  <StarIcon className="star"/> <StarIcon className="star"/> <StarIcon className="star"/> <StarIcon className="star"/> <StarHalfIcon className="star"/></p>
               <h3 className="price">${item.price}</h3>
               <p>Stock available</p>
-              <button className="btn3">Add to cart</button>
+              <button onClick={() => addToCart(item.id)} className="btn3">Add to cart</button>
             </div>
           </div>
         </div>

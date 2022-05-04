@@ -2,8 +2,10 @@ import React from "react";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./css/navbar.css";
+import { useGlobalContext } from "../context";
 
 function Navbar() {
+  const { amount } = useGlobalContext();
   return (
     <>
       <div className="app__navbar">
@@ -65,7 +67,7 @@ function Navbar() {
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     <ShoppingCartIcon />
-                    <span className="quantity">2</span>
+                    <span className="quantity">{amount}</span>
                   </a>
                 </li>
               </ul>

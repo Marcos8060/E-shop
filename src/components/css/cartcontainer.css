@@ -29,3 +29,10 @@
     transition: 1s;
     color: white;
 }
+.increase{
+    color: var(--buttons) !important;
+    background: transparent !important;
+}
+.amount{
+    margin-top: 20px;
+}

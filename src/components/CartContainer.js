@@ -1,16 +1,17 @@
 import React from "react";
 import "./css/cartcontainer.css";
 import { useGlobalContext } from "../context";
+import CartItem from "./CartItem";
 
 function CartContainer() {
-  const { cart, loading } = useGlobalContext()
+  const { cart, loading } = useGlobalContext();
 
-  if(loading){
+  if (loading) {
     return (
       <div className="loading">
         <h1>Loading...</h1>
       </div>
-    )
+    );
   }
 
   return (
@@ -21,12 +22,7 @@ function CartContainer() {
             {cart.map((item) => (
               <div className="col-md-3" key={item.id}>
                 <div className="card">
-                  <img className="img-fluid item_img" src={item.image} alt="" />
-                  <div className="d-flex justify-content-around">
-                    <span>{item.name}</span>
-                    <span>{item.price}</span>
-                  </div>
-                  <a href={"detail/" + item.id}><button className="btn2">View Item</button></a>
+                 <CartItem key={item.id} {...item} />
                 </div>
               </div>
             ))}
