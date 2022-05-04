@@ -21,7 +21,6 @@ root.render(
           <Route exact path="/cart" element={<Cart />}></Route>
           <Route exact path="/" element={<App />}></Route>
         </Routes>
-        <Footer />
       </React.StrictMode>
     </Router>
   </AppProvider>

@@ -36,3 +36,6 @@
 .amount{
     margin-top: 20px;
 }
+.see{
+    color: var(--buttons) !important;
+}

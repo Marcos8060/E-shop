@@ -4,51 +4,31 @@ import ClearIcon from "@material-ui/icons/Clear";
 import React from "react";
 import denim from "../images/denim.png";
 import "./css/cart.css";
+import { useGlobalContext } from "../context";
 
 function Cart() {
+  const { cart, total, amount } = useGlobalContext();
   return (
     <>
       <div className="app__cart">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-8">
+            {cart.map((item)=> (
+              <div className="col-md-8" key={item.id}>
               <div className="cart__item">
                 <div className="row d-flex align-items-center">
                   <div className="col-md-3">
-                    <img className="img-fluid cart__img" src={denim} alt="" />
+                    <img className="img-fluid cart__img" src={item.image} alt="" />
                   </div>
                   <div className="col-md-9">
                     <div className="row">
                       <div className="col-md-4 text-center">
-                        <p className="cart__name">Denim jacket</p>
-                        <p className="cart-price">$3000</p>
+                        <p className="cart__name">{item.name}</p>
+                        <p className="cart-price">${item.price}</p>
                       </div>
                       <div className="col-md-4 text-center">
                         <AddBoxIcon className="plus" />
-                        <h5 className="cart__quantity">0</h5>
-                        <IndeterminateCheckBox className="minus" />
-                      </div>
-                      <div className="col-md-4 text-center">
-                        <ClearIcon className="remove" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="cart__item">
-                <div className="row d-flex align-items-center">
-                  <div className="col-md-3">
-                    <img className="img-fluid cart__img" src={denim} alt="" />
-                  </div>
-                  <div className="col-md-9">
-                    <div className="row">
-                      <div className="col-md-4 text-center">
-                        <p className="cart__name">Denim jacket</p>
-                        <p className="cart-price">$3000</p>
-                      </div>
-                      <div className="col-md-4 text-center">
-                        <AddBoxIcon className="plus" />
-                        <h5 className="cart__quantity">0</h5>
+                        <h5 className="cart__quantity">{item.amount}</h5>
                         <IndeterminateCheckBox className="minus" />
                       </div>
                       <div className="col-md-4 text-center">
@@ -59,11 +39,12 @@ function Cart() {
                 </div>
               </div>
             </div>
+            ))}
             <div className="col-md-4">
-                <div className="card">
+                <div className="card1">
                     <div className="d-flex justify-content-between align-items-center checkout">
                       <h6 className="text-muted">Total : </h6>
-                      <h6>$3000</h6>
+                      <h6>${total}</h6>
                     </div>
                     <p className="mt-4">Shipping Estimates</p>
                     <form>
