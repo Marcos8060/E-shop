@@ -37,6 +37,7 @@
 }
 .cart-price{
     color: var(--buttons);
+    font-weight: 600;
 }
 .remove{
     color: var(--buttons) !important;

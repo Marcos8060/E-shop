@@ -31,6 +31,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: 'TOGGLE_AMOUNT',payload:{id, type}})
   }
 
+  const remove = (id) =>{
+    dispatch({ type: 'REMOVE',payload: id})
+  }
+
 
 
   useEffect(() =>{
@@ -47,7 +51,8 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         ...state,
-        toggleAmount
+        toggleAmount,
+        remove
       }}
     >
       {children}

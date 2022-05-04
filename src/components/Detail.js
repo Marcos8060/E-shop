@@ -1,5 +1,4 @@
 import React,{ useEffect,useState} from "react";
-import denim from "../images/denim.png";
 import "./css/detail.css";
 import StarIcon from '@material-ui/icons/Star';
 import StarHalfIcon from '@material-ui/icons/StarHalf';

@@ -7,7 +7,7 @@ import "./css/cart.css";
 import { useGlobalContext } from "../context";
 
 function Cart() {
-  const { cart, total, amount } = useGlobalContext();
+  const { cart, total, remove, toggleAmount } = useGlobalContext();
   return (
     <>
       <div className="app__cart">
@@ -25,14 +25,24 @@ function Cart() {
                       <div className="col-md-4 text-center">
                         <p className="cart__name">{item.name}</p>
                         <p className="cart-price">${item.price}</p>
+                        <small className="text-muted">{item.price} x {item.amount}</small>
                       </div>
                       <div className="col-md-4 text-center">
-                        <AddBoxIcon className="plus" />
+                        <AddBoxIcon 
+                        className="plus"
+                        onClick={() => toggleAmount(item.id,'inc')}
+                         />
                         <h5 className="cart__quantity">{item.amount}</h5>
-                        <IndeterminateCheckBox className="minus" />
+                        <IndeterminateCheckBox 
+                        className="minus" 
+                        onClick={() => toggleAmount(item.id, 'dec')}
+                        />
                       </div>
                       <div className="col-md-4 text-center">
-                        <ClearIcon className="remove" />
+                        <ClearIcon 
+                        className="remove" 
+                        onClick={() => remove(item.id)}
+                        />
                       </div>
                     </div>
                   </div>
