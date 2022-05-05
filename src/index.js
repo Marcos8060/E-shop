@@ -8,7 +8,7 @@ import Detail from "./components/Detail";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import { AppProvider } from "./context";
-import Soon from "./components/Soon";
+import SoonDetail from "./components/SoonDetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,7 +19,7 @@ root.render(
         <Routes>
           <Route exact path="/" element={<App />}></Route>
           <Route exact path="/detail/:id/" element={<Detail />}></Route>
-          <Route exact path="/soon/:id/" element={<Soon />}></Route>
+          <Route exact path="/soon/:id/" element={<SoonDetail />}></Route>
           <Route exact path="/cart" element={<Cart />}></Route>
           <Route exact path="/" element={<App />}></Route>
         </Routes>
