@@ -4,7 +4,6 @@ import StarIcon from '@material-ui/icons/Star';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useGlobalContext } from "../context";
 import Footer from "./Footer";
 
 

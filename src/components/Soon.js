@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import denim from "../images/denim.png";
 import "./css/soon.css";
 import axios from "axios";
+import VisibilityIcon from '@material-ui/icons/Visibility';
+
 
 const url = `http://127.0.0.1:8000/api/soon/`;
 function Soon() {
@@ -23,11 +25,13 @@ function Soon() {
               <div className="col-md-3" key={item.id}>
                 <div className="card">
                   <img className="img-fluid item_img" src={item.image} alt="" />
-                  <div className="d-flex justify-content-around">
+                  <div className="d-flex justify-content-around align-items-center">
                     <span>{item.name}</span>
                     <span>${item.price}</span>
+                    <a href={"soon/" + item.id}>
+                    <VisibilityIcon className="see" />
+                  </a>
                   </div>
-                  <a href={"soon/" + item.id} className="btn2 text-center text-decoration-none">View item</a>
                 </div>
               </div>
             ))}

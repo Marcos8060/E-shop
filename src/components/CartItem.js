@@ -4,7 +4,6 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useGlobalContext } from "../context";
 import "./css/cartcontainer.css";
 import VisibilityIcon from '@material-ui/icons/Visibility';
-import { Link } from 'react-router-dom'
 
 
 function CartItem({ id, image, name, price, amount }) {
