@@ -5,16 +5,15 @@ import axios from "axios";
 import VisibilityIcon from '@material-ui/icons/Visibility';
 
 
-const url = `http://127.0.0.1:8000/api/soon/`;
 function Soon() {
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    axios.get(url).then((res) => {
-      setItems(res.data);
-      console.log(res.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get(url).then((res) => {
+  //     setItems(res.data);
+  //     console.log(res.data);
+  //   });
+  // }, []);
   return (
     <>
       <div className="app__soon">

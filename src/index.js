@@ -7,12 +7,10 @@ import Navbar from "./components/Navbar";
 import Detail from "./components/Detail";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
-import { AppProvider } from "./context";
 import SoonDetail from "./components/SoonDetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AppProvider>
     <Router>
       <React.StrictMode>
         <Navbar />
@@ -25,7 +23,6 @@ root.render(
         </Routes>
       </React.StrictMode>
     </Router>
-  </AppProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

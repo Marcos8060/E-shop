@@ -2,11 +2,9 @@ import React from "react";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./css/navbar.css";
-import { useGlobalContext } from "../context";
 import {Link} from 'react-router-dom'
 
 function Navbar() {
-  const { amount } = useGlobalContext();
   return (
     <>
       <div className="app__navbar">
@@ -68,7 +66,7 @@ function Navbar() {
                 <li className="nav-item">
                   <a className="nav-link" href="/cart">
                     <ShoppingCartIcon />
-                    <span className="quantity">{amount}</span>
+                    <span className="quantity">0</span>
                   </a>
                 </li>
               </ul>

@@ -4,12 +4,10 @@ import StarIcon from '@material-ui/icons/Star';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useGlobalContext } from "../context";
 import Footer from "./Footer";
 
 
 function Detail() {
-  const { addToCart } = useGlobalContext();
   const [item,setItem] = useState([])
   const { id } = useParams();
   const url = `http://127.0.0.1:8000/api/items/${id}/`
