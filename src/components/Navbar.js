@@ -4,14 +4,14 @@ import MenuIcon from "@material-ui/icons/Menu";
 import "./css/navbar.css";
 import {Link} from 'react-router-dom'
 
-function Navbar({ size }) {
+function Navbar({ size, setShow}) {
   return (
     <>
       <div className="app__navbar">
         <nav className="navbar navbar-expand-lg fixed-top">
           <div className="container">
-            <a className="navbar-brand" href="/">
-              <span className="logo">E</span>-shop
+            <a className="navbar-brand" onClick={() => setShow(true)}>
+              <span  className="logo">E</span>-shop
             </a>
             <button
               className="navbar-toggler"
@@ -65,7 +65,7 @@ function Navbar({ size }) {
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link">
-                    <ShoppingCartIcon />
+                    <ShoppingCartIcon className="cart" onClick={()=> setShow(false)} />
                     <span className="quantity">{size}</span>
                   </a>
                 </li>

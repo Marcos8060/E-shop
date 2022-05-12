@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Detail from "./components/Detail";
 import Footer from "./components/Footer";
 import SoonDetail from "./components/SoonDetail";
+import Flash from "./components/Flash";
+import Soon from "./components/Soon";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +19,7 @@ root.render(
           <Route exact path="/soon/:id/" element={<SoonDetail />}></Route>
           <Route exact path="/" element={<App />}></Route>
         </Routes>
+      <Footer />
       </React.StrictMode>
     </Router>
 );

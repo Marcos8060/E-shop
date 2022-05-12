@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./css/cartcontainer.css";
 import axios from "axios";
 import CartItem from "./CartItem";
-import Skeleton from 'react-loading-skeleton'
 
 
 const url = "https://marcos-shop.herokuapp.com/api/items/";
@@ -13,10 +12,15 @@ function CartContainer({ handleClick }) {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(url).then((res) => {
+    axios.get(url)
+    .then((res) => {
       setItems(res.data);
       setLoading(false);
-    });
+    })
+    .catch((err) =>{
+      console.log(err.response.status);
+      console.log(err.response.data);
+    })
   }, []);
 
   if (loading) {
@@ -33,8 +37,6 @@ function CartContainer({ handleClick }) {
       </>
     );
   }
-
-
 
   return (
     <>

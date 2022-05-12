@@ -21,6 +21,7 @@
 }
 .navbar-brand:hover{
     color: var(--primary);
+    cursor: pointer;
 }
 .navbar-brand:focus{
     color: var(--primary);
