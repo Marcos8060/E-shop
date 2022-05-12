@@ -44,7 +44,7 @@ function CartContainer() {
             {items.map((item) => (
               <div className="col-md-3" key={item.id}>
                 <div className="card">
-                  <CartItem key={item.id} {...item} />
+                  <CartItem key={item.id} item={item} />
                 </div>
               </div>
             ))}

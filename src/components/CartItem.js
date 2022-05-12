@@ -4,7 +4,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "./css/cartcontainer.css";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 
-function CartItem({ id, image, name, price, amount }) {
+function CartItem({ item }) {
+  const { id, image, name, price, amount } = item;
+  
   return (
     <>
       <img className="img-fluid item_img" src={image} alt={name} />
