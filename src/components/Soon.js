@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
-import denim from "../images/denim.png";
 import "./css/soon.css";
 import axios from "axios";
 import VisibilityIcon from '@material-ui/icons/Visibility';
 
-
+const url = "https://marcos-shop.herokuapp.com/api/soon/";
 function Soon() {
   const [items, setItems] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get(url).then((res) => {
-  //     setItems(res.data);
-  //     console.log(res.data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setItems(res.data);
+    });
+  }, []);
   return (
     <>
       <div className="app__soon">
@@ -26,7 +24,7 @@ function Soon() {
                   <img className="img-fluid item_img" src={item.image} alt="" />
                   <div className="d-flex justify-content-around align-items-center">
                     <span>{item.name}</span>
-                    <span>${item.price}</span>
+                    <span>$ {item.price}</span>
                     <a href={"soon/" + item.id}>
                     <VisibilityIcon className="see" />
                   </a>

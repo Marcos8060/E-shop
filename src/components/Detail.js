@@ -10,7 +10,7 @@ import Footer from "./Footer";
 function Detail() {
   const [item,setItem] = useState([])
   const { id } = useParams();
-  const url = `http://127.0.0.1:8000/api/items/${id}/`
+  const url = `https://marcos-shop.herokuapp.com/api/items/${id}/`
 
   useEffect(() =>{
     const getItem = async() =>{
@@ -35,7 +35,7 @@ function Detail() {
               </p>
               <span>Category: {item.category}</span>
               <p>Rated:  <StarIcon className="star"/> <StarIcon className="star"/> <StarIcon className="star"/> <StarIcon className="star"/> <StarHalfIcon className="star"/></p>
-              <h3 className="price">${item.price}</h3>
+              <h3 className="price">$ {item.price}</h3>
               <p>Stock available</p>
               <a href="/" className="btn btn3">Back to shop</a>
             </div>

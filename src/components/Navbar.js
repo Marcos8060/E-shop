@@ -4,7 +4,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import "./css/navbar.css";
 import {Link} from 'react-router-dom'
 
-function Navbar() {
+function Navbar({ size }) {
   return (
     <>
       <div className="app__navbar">
@@ -64,9 +64,9 @@ function Navbar() {
               </ul>
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="/cart">
+                  <a className="nav-link">
                     <ShoppingCartIcon />
-                    <span className="quantity">0</span>
+                    <span className="quantity">{size}</span>
                   </a>
                 </li>
               </ul>

@@ -11,7 +11,7 @@ function Cart() {
       <div className="app__cart">
         <div className="container-fluid">
           <div className="row">
-              <div className="col-md-8">
+            <div className="col-md-8">
               <div className="cart__item">
                 <div className="row d-flex align-items-center">
                   <div className="col-md-3">
@@ -25,38 +25,43 @@ function Cart() {
                         {/* <small className="text-muted">{item.price} x {item.amount}</small> */}
                       </div>
                       <div className="col-md-4 text-center">
-                        <AddBoxIcon 
-                        className="plus"
-                         />
+                        <AddBoxIcon className="plus" />
                         <h5 className="cart__quantity">$ 40</h5>
-                        <IndeterminateCheckBox 
-                        className="minus" 
-                        />
+                        <IndeterminateCheckBox className="minus" />
                       </div>
                       <div className="col-md-4 text-center">
-                        <ClearIcon 
-                        className="remove" 
-                        />
+                        <ClearIcon className="remove" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-                <div className="card1">
-                    <div className="d-flex justify-content-between align-items-center checkout">
-                      <h6 className="text-muted">Total : </h6>
-                      <h6>$ 40</h6>
-                    </div>
-                    <p className="mt-4">Shipping Estimates</p>
-                    <form>
-                        <textarea name="comment" id="" cols="30" rows="4" className="form-control mb-4" placeholder="shipping comments..."></textarea>
-                        <input type="text" className="form-control" placeholder="location..."/>
-                        <button className="btn0">Proceed to checkout</button>
-                    </form>
+            {/* <div className="col-md-4">
+              <div className="card1">
+                <div className="d-flex justify-content-between align-items-center checkout">
+                  <h6 className="text-muted">Total : </h6>
+                  <h6>$ 40</h6>
                 </div>
-            </div>
+                <p className="mt-4">Shipping Estimates</p>
+                <form>
+                  <textarea
+                    name="comment"
+                    id=""
+                    cols="30"
+                    rows="4"
+                    className="form-control mb-4"
+                    placeholder="shipping comments..."
+                  ></textarea>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="location..."
+                  />
+                  <button className="btn0">Proceed to checkout</button>
+                </form>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>

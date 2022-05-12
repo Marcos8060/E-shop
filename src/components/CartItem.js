@@ -4,9 +4,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "./css/cartcontainer.css";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 
-function CartItem({ item }) {
+function CartItem({ item, handleClick }) {
   const { id, image, name, price, amount } = item;
-  
+
   return (
     <>
       <img className="img-fluid item_img" src={image} alt={name} />
@@ -17,14 +17,8 @@ function CartItem({ item }) {
           <VisibilityIcon className="see" />
         </a>
       </div>
-      <div className="d-flex align-items-center justify-content-center">
-        <ExpandLessIcon
-          className="increase"
-        />
-        <p className="amount">{amount}</p>
-        <ExpandMoreIcon
-          className="increase"
-        />
+      <div>
+        <button onClick={() => handleClick(item)} className="btn btn-outline-dark btn-sm mt-4 mb-4">Add to cart</button>
       </div>
     </>
   );

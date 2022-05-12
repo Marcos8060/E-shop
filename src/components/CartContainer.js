@@ -6,7 +6,7 @@ import Skeleton from 'react-loading-skeleton'
 
 
 const url = "https://marcos-shop.herokuapp.com/api/items/";
-function CartContainer() {
+function CartContainer({ handleClick }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -42,9 +42,9 @@ function CartContainer() {
         <div className="container-fluid">
           <div className="row">
             {items.map((item) => (
-              <div className="col-md-3" key={item.id}>
+              <div className="col-md-3 text-center" key={item.id}>
                 <div className="card">
-                  <CartItem key={item.id} item={item} />
+                  <CartItem key={item.id} item={item} handleClick={handleClick} />
                 </div>
               </div>
             ))}
