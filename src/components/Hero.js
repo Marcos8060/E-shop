@@ -25,26 +25,26 @@ function Hero() {
           <div className="row g-0">
             <div className="col-md-3 text-center">
               <div className="iconItem">
-              <LocalShippingIcon />
-              <span className="m-2">FREE SHIPPING</span>
+              <LocalShippingIcon className="ship" />
+              <span className="m-2">Free shipping and return</span>
               </div>
             </div>
             <div className="col-md-3 text-center">
               <div className="iconItem">
-              <AttachMoneyIcon />
-              <span className="m-2">MONEY BACK.</span>
+              <AttachMoneyIcon className="ship" />
+              <span className="m-2">Money back guarantee</span>
               </div>
             </div>
             <div className="col-md-3 text-center">
               <div className="iconItem">
-              <PhoneCallbackIcon />
-              <span className="m-2">SUPPORT 24/7</span>
+              <PhoneCallbackIcon className="ship" />
+              <span className="m-2">Online support 24/7</span>
               </div>
             </div>
             <div className="col-md-3 text-center">
               <div className="iconItem">
-                <HttpsIcon />
-                <span className="m-2">SAFE PAYMENT</span>
+                <HttpsIcon className="ship" />
+                <span className="m-2">Secure payment</span>
               </div>
             </div>
           </div>

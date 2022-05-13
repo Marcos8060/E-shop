@@ -21,7 +21,7 @@
 }
 .navbar-brand{
     color: #2B3445;
-    font-weight: 600;
+    font-weight: bolder;
     font-size: 38px;
 }
 .navbar-brand:hover{
@@ -32,10 +32,10 @@
     color: white;
 }
 .nav-link{
-    color: white;
+    color: #2B3445;
 }
 .nav-link:focus{
-    color: white;
+    color: #2B3445;
 }
 .MuiSvgIcon-root{
     color: var(--cart);

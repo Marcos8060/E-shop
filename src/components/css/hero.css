@@ -36,3 +36,7 @@
     color: white;
     margin: 2px;
 }
+.ship{
+    background: transparent !important;
+    color: white !important;
+}
