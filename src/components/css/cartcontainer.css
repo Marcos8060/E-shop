@@ -1,5 +1,5 @@
 .app__cartContainer{
-    background: var(--secondary);
+    background: white;
     padding-top: 10vh;
     font-family: poppins;
 }
@@ -38,4 +38,9 @@
 }
 .see{
     color: var(--buttons) !important;
+}
+.filters{
+    background: #2B3445;
+    color: white;
+    padding: 10px;
 }

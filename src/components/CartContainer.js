@@ -42,14 +42,43 @@ function CartContainer({ handleClick }) {
     <>
       <div className="app__cartContainer">
         <div className="container-fluid">
+          <h3 className="text-center">Featured Products</h3>
+          <p className="text-center">Amazing products added recently in our catalogue</p>
           <div className="row">
-            {items.map((item) => (
-              <div className="col-md-3 text-center" key={item.id}>
-                <div className="card">
-                  <CartItem key={item.id} item={item} handleClick={handleClick} />
-                </div>
-              </div>
-            ))}
+            <div className="col-md-3 text-center filters">
+              <h3>Filter Products</h3>
+              <form>
+                <label htmlFor="ascending" className="form-label">Ascending</label>
+                <input type="radio" className="" />
+                <br />
+                <label htmlFor="descending" className="form-label">Descending</label>
+                <input type="radio" className="" />
+                <br />
+                <label htmlFor="ladies" className="form-label">Ladies</label>
+                <input type="checkbox" className="" />
+                <br />
+                <label htmlFor="men" className="form-label">Men</label>
+                <input type="checkbox" className="" />
+              </form>
+            </div>
+            <div className="col-md-3">
+              <CartItem />
+            </div>
+            <div className="col-md-3">
+              <CartItem />
+            </div>
+            <div className="col-md-3">
+              <CartItem />
+            </div>
+            <div className="col-md-3">
+              <CartItem />
+            </div>
+            <div className="col-md-3">
+              <CartItem />
+            </div>
+            <div className="col-md-3">
+              <CartItem />
+            </div>
           </div>
         </div>
       </div>
