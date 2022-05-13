@@ -1,33 +1,41 @@
-import React,{useEffect,useState,useRef} from "react";
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import React, { useEffect, useState, useRef } from "react";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./css/navbar.css";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import image from "../images/shoe8.webp";
+import DeleteIcon from "@material-ui/icons/Delete";
 
-function Navbar({ size, setShow}) {
-  const [navBackground, setNavBackground] = useState(false)
-    const navRef = useRef()
-    navRef.current = navBackground
-    useEffect(() => {
-      const handleScroll = () => {
-        const show = window.scrollY > 50
-        if (navRef.current !== show) {
-          setNavBackground(show)
-        }
+function Navbar({ size, setShow }) {
+  const [navBackground, setNavBackground] = useState(false);
+  const navRef = useRef();
+  navRef.current = navBackground;
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 50;
+      if (navRef.current !== show) {
+        setNavBackground(show);
       }
-      document.addEventListener('scroll', handleScroll)
-      return () => {
-        document.removeEventListener('scroll', handleScroll)
-      }
-    }, [])
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <div className="app__navbar">
-        <nav className="navbar navbar-expand-lg fixed-top" style={{ transition: '1s ease',backgroundColor: navBackground ? '#EAE9E5' : 'transparent'}}>
+        <nav
+          className="navbar navbar-expand-lg fixed-top"
+          style={{
+            transition: "1s ease",
+            backgroundColor: navBackground ? "#EAE9E5" : "transparent",
+          }}
+        >
           <div className="container">
             <a className="navbar-brand" onClick={() => setShow(true)}>
-              <span  className="logo">E</span>-shop
+              <span className="logo">E</span>-shop
             </a>
             <button
               className="navbar-toggler"
@@ -78,12 +86,65 @@ function Navbar({ size, setShow}) {
                   </ul>
                 </li>
               </ul>
-              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link">
+              <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     <ShoppingBasketIcon className="cart" />
                     <span className="quantity">{size}</span>
                   </a>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <div className="toCart">
+                      <img className="img-fluid toCartImg" src={image} alt="" />
+                      <div>
+                        <span>Italian leather</span>
+                        <br />
+                        <span>$ 40</span>
+                      </div>
+                      <DeleteIcon className="delete" />
+                    </div>
+                    <hr />
+                    <div className="toCart">
+                      <img className="img-fluid toCartImg" src={image} alt="" />
+                      <div>
+                        <span>Italian leather</span>
+                        <br />
+                        <span>$ 40</span>
+                      </div>
+                      <DeleteIcon className="delete" />
+                    </div>
+                    <hr />
+                    <div className="toCart">
+                      <img className="img-fluid toCartImg" src={image} alt="" />
+                      <div>
+                        <span>Italian leather</span>
+                        <br />
+                        <span>$ 40</span>
+                      </div>
+                      <DeleteIcon className="delete" />
+                    </div>
+                    <hr />
+                    <div className="toCart">
+                      <img className="img-fluid toCartImg" src={image} alt="" />
+                      <div>
+                        <span>Italian leather</span>
+                        <br />
+                        <span>$ 40</span>
+                      </div>
+                      <DeleteIcon className="delete" />
+                    </div>
+                    <hr />
+                    <button className="btn9">Go to cart</button>
+                  </ul>
                 </li>
               </ul>
             </div>

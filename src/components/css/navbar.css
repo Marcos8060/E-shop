@@ -59,3 +59,29 @@
 .navbar-toggler:focus{
     box-shadow: none;
 }
+.delete{
+    background: transparent;
+    color: var(--buttons);
+}
+.toCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.dropdown-menu{
+    width: 300px;
+    padding: 10px;
+}
+.toCartImg{
+    width: 70px;
+    border-radius: 999px;
+}
+.btn9{
+    background: #2B3445;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 4px;
+    border-radius: 3px;
+}
