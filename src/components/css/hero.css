@@ -7,16 +7,32 @@
 .col-md-7{
     margin-top: 20vh;
 }
-.btn1{
-    background: var(--buttons);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    font-weight: 500;
-}
 .intro{
     font-weight: bold;
     color: #2B3445;
     font-size: 44px;
+}
+.marketing{
+    font-size: 7rem;
+}
+.get{
+    background: transparent;
+    border: 3px solid #212529;
+    font-size: 30px;
+    color: #212529;
+    font-weight: 600;
+    width: 70%;
+    padding: 10px;
+    margin-top: 4vh;
+}
+.get:hover{
+    background: #212529;
+    color: white;
+    transition: 1s;
+}
+.iconItem{
+    background: #2B3445;
+    padding: 10px;
+    color: white;
+    margin: 2px;
 }

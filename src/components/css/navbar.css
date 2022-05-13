@@ -1,13 +1,14 @@
 .navbar{
-    background: white;
-    box-shadow:  0px 2px 8px lightgray;
+    background: #2B3445;
+    color: white;
+    /* box-shadow:  0px 2px 8px lightgray; */
     font-family: poppins;
 }
-.logo{
+/* .logo{
     color: var(--buttons);
     font-size: 40px;
     font-weight: 700;
-}
+} */
 .logo:hover{
     color: var(--buttons);
 }
@@ -15,7 +16,7 @@
     color: var(--buttons);
 }
 .navbar-brand{
-    color: var(--primary);
+    color: white;
     font-weight: 600;
     font-size: 38px;
 }
@@ -24,16 +25,13 @@
     cursor: pointer;
 }
 .navbar-brand:focus{
-    color: var(--primary);
+    color: white;
 }
 .nav-link{
-    color: var(--primary);
-}
-.nav-link:hover{
-    color: var(--primary);
+    color: white;
 }
 .nav-link:focus{
-    color: var(--primary);
+    color: white;
 }
 .MuiSvgIcon-root{
     color: var(--cart);
@@ -43,8 +41,8 @@
     padding: 10px !important;
 }
 .quantity{
-    font-size: 20px;
-    color: var(--buttons);
+    font-size: 30px;
+    color: white;
     font-weight: 600;
     margin-bottom: 30px;
 }
