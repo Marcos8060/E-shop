@@ -42,5 +42,6 @@
 .filters{
     background: #2B3445;
     color: white;
+    height: 40vh;
     padding: 10px;
 }

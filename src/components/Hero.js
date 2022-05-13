@@ -32,19 +32,19 @@ function Hero() {
             <div className="col-md-3 text-center">
               <div className="iconItem">
               <AttachMoneyIcon />
-              <span className="m-2">MONEY BACK</span>
+              <span className="m-2">MONEY BACK.</span>
               </div>
             </div>
             <div className="col-md-3 text-center">
               <div className="iconItem">
               <PhoneCallbackIcon />
-              <span className="m-2">ONLINE SUPPORT 24/7</span>
+              <span className="m-2">SUPPORT 24/7</span>
               </div>
             </div>
             <div className="col-md-3 text-center">
               <div className="iconItem">
                 <HttpsIcon />
-                <span className="m-2">SECURE PAYMENT</span>
+                <span className="m-2">SAFE PAYMENT</span>
               </div>
             </div>
           </div>
