@@ -20,3 +20,11 @@
 .cart:hover{
   cursor: pointer;
 }
+
+.navbar{
+  background-color: transparent;
+}
+
+.navbar.colorChange{
+  background-color: #000;
+}
