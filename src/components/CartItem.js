@@ -3,7 +3,7 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "./css/cartcontainer.css";
 import VisibilityIcon from "@material-ui/icons/Visibility";
-import image from "../images/shoe4.webp";
+import image from "../images/shoe8.webp";
 
 function CartItem({ item, handleClick }) {
   // const { id, image, name, price, amount } = item;
@@ -12,16 +12,11 @@ function CartItem({ item, handleClick }) {
     <>
         <img className="img-fluid item_img" src={image} />
         <div className="d-flex justify-content-around align-items-center">
-          <span>hello</span>
+          <span>Yellow men's shoes</span>
           <span>$ 34</span>
           <a href="/">
             <VisibilityIcon className="see" />
           </a>
-        </div>
-        <div>
-          <button className="btn btn-outline-dark btn-sm mt-4 mb-4">
-            Add to cart
-          </button>
         </div>
     </>
   );

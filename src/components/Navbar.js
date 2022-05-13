@@ -1,5 +1,5 @@
 import React,{useEffect,useState,useRef} from "react";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import MenuIcon from "@material-ui/icons/Menu";
 import "./css/navbar.css";
 import {Link} from 'react-router-dom'
@@ -24,7 +24,7 @@ function Navbar({ size, setShow}) {
   return (
     <>
       <div className="app__navbar">
-        <nav className="navbar navbar-expand-lg fixed-top" style={{ transition: '1s ease',backgroundColor: navBackground ? 'black' : 'transparent'}}>
+        <nav className="navbar navbar-expand-lg fixed-top" style={{ transition: '1s ease',backgroundColor: navBackground ? '#EAE9E5' : 'transparent'}}>
           <div className="container">
             <a className="navbar-brand" onClick={() => setShow(true)}>
               <span  className="logo">E</span>-shop
@@ -81,7 +81,7 @@ function Navbar({ size, setShow}) {
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link">
-                    <ShoppingCartIcon className="cart" onClick={()=> setShow(false)} />
+                    <ShoppingBasketIcon className="cart" />
                     <span className="quantity">{size}</span>
                   </a>
                 </li>

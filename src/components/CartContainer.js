@@ -42,7 +42,7 @@ function CartContainer({ handleClick }) {
           <p className="text-center">
             Amazing products added recently in our catalogue
           </p>
-          <div className="row g-0">
+          <div className="row">
             <div className="col-md-3 filters">
               <h3 className="text-center">Filter Products</h3>
               <form>
@@ -67,7 +67,7 @@ function CartContainer({ handleClick }) {
                   <input type="checkbox" className="" />
               </form>
             </div>
-            <div className="col-md-3 text-center">
+            <div className="col-md-3 product text-center">
               <CartItem />
             </div>
             <div className="col-md-3 text-center">

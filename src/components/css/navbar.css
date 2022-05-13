@@ -4,6 +4,10 @@
     /* box-shadow:  0px 2px 8px lightgray; */
     font-family: poppins;
 }
+.cart{
+    color: black !important;
+    background: transparent !important;
+}
 /* .logo{
     color: var(--buttons);
     font-size: 40px;
@@ -16,7 +20,7 @@
     color: var(--buttons);
 }
 .navbar-brand{
-    color: white;
+    color: #2B3445;
     font-weight: 600;
     font-size: 38px;
 }
@@ -41,10 +45,11 @@
     padding: 10px !important;
 }
 .quantity{
-    font-size: 30px;
-    color: white;
-    font-weight: 600;
+    font-size: 24px;
+    color: var(--buttons);
+    font-weight: 700;
     margin-bottom: 30px;
+    margin-left: -14px;
 }
 .menu{
     background: transparent !important;

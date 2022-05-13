@@ -38,10 +38,14 @@
 }
 .see{
     color: var(--buttons) !important;
+    background: transparent !important;
 }
 .filters{
     background: #2B3445;
     color: white;
-    height: 40vh;
     padding: 10px;
+    margin-bottom: 3vh;
+}
+.product{
+    margin-bottom: 7vh;
 }

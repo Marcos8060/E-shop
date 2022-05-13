@@ -12,7 +12,7 @@ function Hero() {
       <div className="app__hero">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-5 text-center">
               <h1 className="intro">Summer sale <br /> <span className="marketing">30% off.</span></h1>
               <button className="get">
                 GET YOURS
