@@ -44,28 +44,13 @@ function CartContainer({ handleClick }) {
           </p>
           <div className="row">
             <div className="col-md-3 filters">
-              <h3 className="text-center">Filter Products</h3>
-              <form>
-                  <label htmlFor="ascending" className="form-label m-2">
-                    Ascending
-                  </label>
-                  <input type="radio" className="" />
-                <br />
-                  <label htmlFor="descending" className="form-label m-2">
-                    Descending
-                  </label>
-                  <input type="radio" className="" />
-                <br />
-                  <label htmlFor="ladies" className="form-label m-2">
-                    Ladies
-                  </label>
-                  <input type="checkbox" className="" />
-                <br />
-                  <label htmlFor="men" className="form-label m-2">
-                    Men
-                  </label>
-                  <input type="checkbox" className="" />
-              </form>
+              <h3 className="text-center">Select by Category</h3>
+              <div className="d-flex flex-column">
+                <p>Ladies</p>
+                <p>Gents</p>
+                <p>Ascending</p>
+                <p>Descending</p>
+              </div>
             </div>
             <div className="col-md-3 product text-center">
               <CartItem />
