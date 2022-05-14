@@ -12,7 +12,7 @@ function Navbar({ size, setShow }) {
   navRef.current = navBackground;
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 50;
+      const show = window.scrollY > 40;
       if (navRef.current !== show) {
         setNavBackground(show);
       }
@@ -30,12 +30,12 @@ function Navbar({ size, setShow }) {
           className="navbar navbar-expand-lg fixed-top"
           style={{
             transition: "1s ease",
-            backgroundColor: navBackground ? "#EAE9E5" : "transparent",
+            backgroundColor: navBackground ? "#F8CA4C" : "transparent",
           }}
         >
           <div className="container">
             <a className="navbar-brand" onClick={() => setShow(true)}>
-              <span className="logo">E</span>-shop
+              <h1 className="logo">Bike</h1>
             </a>
             <button
               className="navbar-toggler"

@@ -33,7 +33,7 @@
 .heroBtn:hover{
     background: #F8CA4C;
     transition: .4s;
-    border: none;
+    border: 2px solid #F8CA4C;
     color: white;
     font-weight: bold;
 }
