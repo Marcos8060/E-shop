@@ -45,12 +45,12 @@ function CartContainer({ handleClick }) {
           <div className="row">
             <div className="col-md-3 filters">
               <h3 className="text-center">Select by Category</h3>
-              <div className="d-flex flex-column">
-                <p>Ladies</p>
-                <p>Gents</p>
-                <p>Ascending</p>
-                <p>Descending</p>
-              </div>
+              <ul className="list-group">
+                <li className="list-group-item">Ladies</li>
+                <li className="list-group-item">Gents</li>
+                <li className="list-group-item">Descending</li>
+                <li className="list-group-item">Ascending</li>
+              </ul>
             </div>
             <div className="col-md-3 product text-center">
               <CartItem />
