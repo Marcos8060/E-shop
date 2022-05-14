@@ -1,18 +1,19 @@
 import React from "react";
 import "./css/cartcontainer.css";
 import VisibilityIcon from "@material-ui/icons/Visibility";
-import image from "../images/shoe8.webp";
+import bike from "../images/bike3.png";
 
 function CartItem({ item, handleClick }) {
   // const { id, image, name, price, amount } = item;
 
   return (
     <>
-      <img className="img-fluid item_img" src={image} />
-      <div className="d-flex justify-content-around align-items-center">
-        <span>Yellow men's shoes</span>
-        <span>$ 34</span>
-          <VisibilityIcon className="see" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" />
+      <img className="img-fluid item_img" src={bike} />
+      <div>
+        <h5 className="fw-bolder">Yellow men's shoes</h5>
+        <span className="price">$ 34</span>
+        <button className="buyBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Buy now</button>
+          {/* <VisibilityIcon className="see" /> */}
       </div>
 
       {/* detail */}
@@ -27,7 +28,7 @@ function CartItem({ item, handleClick }) {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title fw-bold" id="exampleModalLabel">
-                E-shop
+              Yellow men's shoes
               </h5>
               <button
                 type="button"
@@ -39,7 +40,7 @@ function CartItem({ item, handleClick }) {
             <div class="modal-body">
               <div className="row g-0">
                 <div className="col-md-6">
-                  <img className="img-fluid" src={image} alt="" />
+                  <img className="img-fluid" src={bike} alt="" />
                 </div>
                 <div className="col-md-6 text-left">
                   <h1 className="fw-bold">Light Brown Shoes</h1>

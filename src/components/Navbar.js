@@ -86,7 +86,7 @@ function Navbar({ size, setShow }) {
                   </ul>
                 </li>
               </ul>
-              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -97,7 +97,7 @@ function Navbar({ size, setShow }) {
                     aria-expanded="false"
                   >
                     <ShoppingBasketIcon className="cart" />
-                    <span className="quantity">{size}</span>
+                    <span className="quantity">0</span>
                   </a>
                   <ul
                     className="dropdown-menu"

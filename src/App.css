@@ -4,12 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Nunito;
 }
 :root{
   --primary: #103460;
   --buttons: #D24257;
   --secondary: #F6F9FC;
   --cart: #6F7072;
+  --yellow: #FDB939;
 }
 .loading{
   margin-top: 20vh;

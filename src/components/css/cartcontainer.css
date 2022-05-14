@@ -42,11 +42,23 @@
     background: transparent !important;
 }
 .filters{
-    background: #2B3445;
+    background: #181B1F;
+    text-align: center;
     color: white;
     padding: 10px;
     margin-bottom: 3vh;
 }
 .product{
     margin-bottom: 7vh;
+}
+.buyBtn{
+    border: none;
+    background: black;
+    color: white;
+    padding: 4px;
+    margin-left: 8px;
+    border-radius: 3px;
+}
+.price{
+    color: var(--yellow);
 }

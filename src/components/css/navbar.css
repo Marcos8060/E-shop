@@ -46,7 +46,7 @@
 }
 .quantity{
     font-size: 24px;
-    color: var(--buttons);
+    color: black;
     font-weight: 700;
     margin-bottom: 30px;
     margin-left: -14px;
@@ -70,7 +70,7 @@
     text-align: center;
 }
 .dropdown-menu{
-    width: 412px;
+    width: 340px;
     padding: 10px;
 }
 .toCartImg{
