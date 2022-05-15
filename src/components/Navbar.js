@@ -5,8 +5,10 @@ import "./css/navbar.css";
 import { Link } from "react-router-dom";
 import image from "../images/shoe8.webp";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { GlobalContext } from "../context";
 
 function Navbar({ size, setShow }) {
+  const { state:{cart}} = GlobalContext();
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef();
   navRef.current = navBackground;
@@ -64,7 +66,7 @@ function Navbar({ size, setShow }) {
                     aria-expanded="false"
                   >
                     <ShoppingBasketIcon className="cart" />
-                    <span className="quantity">0</span>
+                    <span className="quantity">{cart.length}</span>
                   </a>
                   <ul
                     className="dropdown-menu"

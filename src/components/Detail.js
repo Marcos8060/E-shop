@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import './css/detail.css'
+import { GlobalContext } from "../context";
 
 function Detail() {
+    const { state:{cart},dispatch} = GlobalContext();
+    console.log(cart)
   const { id } = useParams();
   const [item, setItem] = useState([]);
 
@@ -40,7 +43,14 @@ function Detail() {
                 <button className="increaseBtn">+</button>
               </div>
               <div>
-                <button className="addBtn">Add to cart</button>
+                <button  
+                onClick={() =>{
+                dispatch({
+                type: 'ADD_TO_CART',
+                payload: item
+                })
+                }}
+                className="addBtn">Add to cart</button>
               </div>
             </div>
           </div>

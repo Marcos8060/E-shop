@@ -6,7 +6,6 @@ import { GlobalContext } from "../context";
 
 function CartContainer() {
   const { products} = GlobalContext();
-  console.log(products);
 
   return (
     <>
