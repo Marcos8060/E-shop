@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./css/cartcontainer.css";
 import axios from "axios";
 import CartItem from "./CartItem";
+import { GlobalContext } from "../context";
 
 function CartContainer() {
+  const { products} = GlobalContext();
+  console.log(products);
 
   return (
     <>
@@ -23,24 +26,11 @@ function CartContainer() {
                 <li className="list-group-item">Ascending</li>
               </ul>
             </div>
-            <div className="col-md-3 product text-center">
-              <CartItem />
-            </div>
-            <div className="col-md-3 text-center">
-              <CartItem />
-            </div>
-            <div className="col-md-3 text-center">
-              <CartItem />
-            </div>
-            <div className="col-md-3 text-center">
-              <CartItem />
-            </div>
-            <div className="col-md-3 text-center">
-              <CartItem />
-            </div>
-            <div className="col-md-3 text-center">
-              <CartItem />
-            </div>
+            {products.map((item) =>(
+              <div className="col-md-3 product text-center" key={item.id}>
+               <CartItem  item={item}/>
+              </div>
+            ))}
           </div>
         </div>
       </div>
