@@ -37,3 +37,13 @@
     color: white;
     font-weight: bold;
 }
+.video{
+  background: var(--yellow) !important;
+  color: black !important;
+  height: 60px !important;
+  width: 60px !important;
+
+}
+.video:hover{
+  cursor: pointer;
+}
