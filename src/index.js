@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import Context from "./context";
+import Detail from "./components/Detail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
         <Routes>
           <Route exact path="/" element={<App />}></Route>
           <Route exact path="/cart" element={<Cart />}></Route>
+          <Route exact path="/product/:id/" element={<Detail />}></Route>
         </Routes>
         <Footer />
       </React.StrictMode>

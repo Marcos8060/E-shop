@@ -2,6 +2,7 @@ import React from "react";
 import "./css/cartcontainer.css";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import bike from "../images/bike3.png";
+import { Link } from "react-router-dom";
 
 function CartItem({ item}) {
   const { id, image, name, price, amount } = item;
@@ -12,7 +13,7 @@ function CartItem({ item}) {
       <div>
         <h5 className="fw-bolder">{name}</h5>
         <span className="price">$ {price}</span>
-        <button className="buyBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Buy now</button>
+        <Link to={`product/${id}/`} className="buyBtn text-decoration-none" >Buy now</Link>
       </div>
 
       {/* detail */}
