@@ -3,12 +3,13 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./css/navbar.css";
 import { Link } from "react-router-dom";
-import image from "../images/shoe8.webp";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { GlobalContext } from "../context";
 
 function Navbar({ size, setShow }) {
-  const { state:{cart}} = GlobalContext();
+  const {
+    state: { cart },
+  } = GlobalContext();
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef();
   navRef.current = navBackground;
@@ -36,7 +37,7 @@ function Navbar({ size, setShow }) {
           }}
         >
           <div className="container">
-            <Link to='/' className="navbar-brand">
+            <Link to="/" className="navbar-brand">
               <h1 className="logo">Bike</h1>
             </Link>
             <button
@@ -54,7 +55,6 @@ function Navbar({ size, setShow }) {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li className="nav-item dropdown">
                   <a
@@ -72,52 +72,30 @@ function Navbar({ size, setShow }) {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <div className="toCart">
-                      <img className="img-fluid toCartImg" src={image} alt="" />
-                      <div>
-                        <span>Italian leather</span>
-                        <br />
-                        <span>$ 40</span>
-                      </div>
-                      <DeleteIcon className="delete" />
-                    </div>
-                    <hr />
-                    <div className="toCart">
-                      <img className="img-fluid toCartImg" src={image} alt="" />
-                      <div>
-                        <span>Italian leather</span>
-                        <br />
-                        <span>$ 40</span>
-                      </div>
-                      <DeleteIcon className="delete" />
-                    </div>
-                    <hr />
-                    <div className="toCart">
-                      <img className="img-fluid toCartImg" src={image} alt="" />
-                      <div>
-                        <span>Italian leather</span>
-                        <br />
-                        <span>$ 40</span>
-                      </div>
-                      <DeleteIcon className="delete" />
-                    </div>
-                    <hr />
-                    <div className="toCart">
-                      <img className="img-fluid toCartImg" src={image} alt="" />
-                      <div>
-                        <span>Italian leather</span>
-                        <br />
-                        <span>$ 40</span>
-                      </div>
-                      <DeleteIcon className="delete" />
-                    </div>
-                    <hr />
+                    {cart.map((item) => (
+                      <>
+                        <div className="toCart">
+                          <img
+                            className="img-fluid toCartImg"
+                            src={item.image}
+                            alt=""
+                          />
+                          <div>
+                            <span>{item.name}</span>
+                            <br />
+                            <span>$ {item.price}</span>
+                          </div>
+                          <DeleteIcon className="delete" />
+                        </div>
+                        <hr />
+                      </>
+                    ))}
                     <div className=" total1 d-flex justify-content-between align-items-center">
                       <p>Total</p>
                       <p>$ 20300</p>
                     </div>
                     <hr />
-                    <button className="btn9">Go to cart</button>
+                    <Link to='/cart' className="btn9">Go to cart</Link>
                   </ul>
                 </li>
               </ul>

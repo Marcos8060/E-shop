@@ -1,11 +1,12 @@
-import { IndeterminateCheckBox } from "@material-ui/icons";
-import AddBoxIcon from "@material-ui/icons/AddBox";
-import DeleteIcon from "@material-ui/icons/Delete";
 import React from "react";
 import "./css/cart.css";
-import bike from "../images/bike3.png";
+import { GlobalContext } from "../context";
+import DeleteIcon from "@material-ui/icons/Delete";
+
+
 
 function Cart() {
+  const { state:{cart},dispatch}  = GlobalContext();
   return (
     <>
       <div className="app__cart">
@@ -29,15 +30,19 @@ function Cart() {
                     <th scope="col" class="fw-bold">
                       TOTAL
                     </th>
+                    <th scope="col" class="fw-bold">
+                      ACTION
+                    </th>
                   </tr>
                 </thead>
-                <tbody>
+                {cart.map((item) =>(
+                  <tbody>
                   <tr className="cart__items">
                     <th scope="row">
-                      <img className="img-fluid cart__img" src={bike} alt="" />
-                      <span>Diamond Black</span>
+                      <img className="img-fluid cart__img" src={item.image} alt="" />
+                      <span>{item.name}</span>
                     </th>
-                    <td className="fw-normal data">$ 2,800</td>
+                    <td className="fw-normal data">$ {item.price}</td>
                     <td className="fw-normal">
                     <div>
                       <button className="increaseCartBtn">-</button>
@@ -46,42 +51,19 @@ function Cart() {
                     </div>
                     </td>
                     <td className="fw-normal">$ 7900</td>
-                  </tr>
-                </tbody>
-                <tbody>
-                  <tr className="cart__items">
-                    <th scope="row">
-                      <img className="img-fluid cart__img" src={bike} alt="" />
-                      <span>Diamond Black</span>
-                    </th>
-                    <td className="fw-normal data">$ 2,800</td>
                     <td className="fw-normal">
-                    <div>
-                      <button className="increaseCartBtn">-</button>
-                      <button className="increaseCartBtn">0</button>
-                      <button className="increaseCartBtn">+</button>
-                    </div>
+                      <DeleteIcon 
+                      onClick={()=>{
+                        dispatch({
+                          type: 'REMOVE',
+                          payload: item
+                        })
+                      }}
+                      className="delete" />
                     </td>
-                    <td className="fw-normal">$ 7900</td>
                   </tr>
                 </tbody>
-                <tbody>
-                  <tr className="cart__items">
-                    <th scope="row">
-                      <img className="img-fluid cart__img" src={bike} alt="" />
-                      <span>Diamond Black</span>
-                    </th>
-                    <td className="fw-normal data">$ 2,800</td>
-                    <td className="fw-normal">
-                    <div>
-                      <button className="increaseCartBtn">-</button>
-                      <button className="increaseCartBtn">0</button>
-                      <button className="increaseCartBtn">+</button>
-                    </div>
-                    </td>
-                    <td className="fw-normal">$ 7900</td>
-                  </tr>
-                </tbody>
+                ))}
               </table>
             </div>
             <div className="col-md-4">
