@@ -84,6 +84,11 @@
     padding: 11px;
     margin-left: 7px;
 }
+.addBtn:hover{
+    background: black;
+    color: white;
+    transition: .4s;
+}
 .item__footer{
     display: flex;
     justify-content: center;
