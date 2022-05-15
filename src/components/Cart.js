@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./css/cart.css";
 import { GlobalContext } from "../context";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { Link } from 'react-router-dom'
 
 function Cart() {
   const {
@@ -16,6 +17,12 @@ function Cart() {
     );
   }, [cart]);
 
+  if(cart.length === 0){
+    return(
+      <h3 className="empty text-center">Your Cart is Empty!</h3>
+    )
+  }
+
   return (
     <>
       <div className="app__cart">
@@ -23,23 +30,23 @@ function Cart() {
           <h1 className="text-center">Cart</h1>
           <p className="text-center mb-4">Your shopping cart</p>
           <div className="row">
-            <div className="col-md-8">
-              <table className="table table-bordered text-center">
+            <div className="col-md-8 table-responsive">
+              <table className="table table-bordered">
                 <thead className="schema-names">
                   <tr className="heads">
-                    <th scope="col" class="fw-bold">
+                    <th scope="col" className="fw-bold">
                       PRODUCT NAME
                     </th>
-                    <th scope="col" class="fw-bold">
+                    <th scope="col" className="fw-bold">
                       PRICE
                     </th>
-                    <th scope="col" class="fw-bold">
+                    <th scope="col" className="fw-bold">
                       QUANTITY
                     </th>
-                    <th scope="col" class="fw-bold">
+                    <th scope="col" className="fw-bold">
                       TOTAL
                     </th>
-                    <th scope="col" class="fw-bold">
+                    <th scope="col" className="fw-bold">
                       ACTION
                     </th>
                   </tr>
@@ -68,7 +75,7 @@ function Cart() {
                                 },
                               })
                             }
-                            class="form-select"
+                            className="form-select"
                             aria-label=".form-select-sm example"
                           >
                             <option selected>Select quantity</option>
@@ -100,6 +107,7 @@ function Cart() {
                   </tbody>
                 ))}
               </table>
+              <Link to='/' className="goCheckout text-decoration-none">Continue shopping</Link>
             </div>
             <div className="col-md-4">
               <div className="card">

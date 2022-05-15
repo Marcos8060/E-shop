@@ -9,6 +9,7 @@ import { GlobalContext } from "../context";
 function Navbar() {
   const { state: { cart },dispatch} = GlobalContext();
   const [navBackground, setNavBackground] = useState(false);
+  const [total,setTotal] = useState()
   const navRef = useRef();
   navRef.current = navBackground;
   useEffect(() => {
@@ -23,6 +24,12 @@ function Navbar() {
       document.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    setTotal(
+      cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
+    );
+  }, [cart]);
 
   return (
     <>
@@ -97,10 +104,10 @@ function Navbar() {
                     ))}
                     <div className=" total1 d-flex justify-content-between align-items-center">
                       <p>Total</p>
-                      <p>$ 20300</p>
+                      <p>$ {total}</p>
                     </div>
                     <hr />
-                    <Link to='/cart' className="btn9">Go to cart</Link>
+                    <Link to='/cart' className="btn9 text-decoration-none">Go to cart</Link>
                   </ul>
                 </li>
               </ul>
