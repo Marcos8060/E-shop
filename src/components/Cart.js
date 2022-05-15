@@ -3,76 +3,82 @@ import AddBoxIcon from "@material-ui/icons/AddBox";
 import DeleteIcon from "@material-ui/icons/Delete";
 import React from "react";
 import "./css/cart.css";
-import { useEffect, useState } from "react";
+import bike from "../images/bike3.png";
 
-function Cart({ cart, setCart, handleChange }) {
-  const [price, setPrice] = useState(0);
-
-  const handleRemove = (id) => {
-    const arr = cart.filter((item) => item.id !== id);
-    setCart(arr);
-    handlePrice();
-  };
-
-  const handlePrice = () => {
-    let ans = 0;
-    cart.map((item) => (ans += item.amount * item.price));
-    setPrice(ans);
-  };
-
-  useEffect(() => {
-    handlePrice();
-  });
-  if (cart.legth === 0) {
-    return <div>Your Cart is empty</div>;
-  }
+function Cart() {
   return (
     <>
       <div className="app__cart">
         <div className="container-fluid">
+          <h1 className="text-center">Cart</h1>
+          <p className="text-center mb-4">Your shopping cart</p>
           <div className="row">
-            {cart.map((item) => (
-              <div className="col-md-6 single__item" key={item.id}>
-                <div className="cart__item">
-                  <div className="row d-flex align-items-center">
-                    <div className="col-md-3 text-center">
-                      <img className="img-fluid" src={item.image} alt="" />
-                    </div>
-                    <div className="col-md-9">
-                      <div className="row">
-                        <div className="col-md-4 text-center">
-                          <p className="cart__name">{item.name}</p>
-                          <p className="cart-price">$ {item.price}</p>
-                          <small className="text-muted">
-                            {item.price} x {item.amount}
-                          </small>
-                        </div>
-                        <div className="col-md-4 text-center">
-                          <AddBoxIcon
-                            onClick={() => handleChange(item, 1)}
-                            className="plus"
-                          />
-                          <h5 className="cart__quantity">{item.amount}</h5>
-                          <IndeterminateCheckBox
-                            onClick={() => handleChange(item, -1)}
-                            className="minus"
-                          />
-                        </div>
-                        <div className="col-md-4 text-center">
-                          <DeleteIcon
-                            onClick={() => handleRemove(item.id)}
-                            className="remove"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div className="col-md-8">
+              <table class="table table-bordered text-center">
+                <thead class="schema-names">
+                  <tr className="heads">
+                    <th scope="col" class="fw-bold">
+                      PRODUCT NAME
+                    </th>
+                    <th scope="col" class="fw-bold">
+                      PRICE
+                    </th>
+                    <th scope="col" class="fw-bold">
+                      QUANTITY
+                    </th>
+                    <th scope="col" class="fw-bold">
+                      TOTAL
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="cart__items">
+                    <th scope="row">
+                      <img className="img-fluid cart__img" src={bike} alt="" />
+                      <span>Diamond Black</span>
+                    </th>
+                    <td class="fw-normal data">$ 2,800</td>
+                    <td class="fw-normal">marc@gmail.com</td>
+                    <td class="fw-normal">$ 7900</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr className="cart__items">
+                    <th scope="row">
+                      <img className="img-fluid cart__img" src={bike} alt="" />
+                      <span>Diamond Black</span>
+                    </th>
+                    <td class="fw-normal data">$ 2,800</td>
+                    <td class="fw-normal">marc@gmail.com</td>
+                    <td class="fw-normal">$ 7900</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr className="cart__items">
+                    <th scope="row">
+                      <img className="img-fluid cart__img" src={bike} alt="" />
+                      <span>Diamond Black</span>
+                    </th>
+                    <td class="fw-normal data">$ 2,800</td>
+                    <td class="fw-normal">marc@gmail.com</td>
+                    <td class="fw-normal">$ 7900</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="col-md-4">
+              <div className="card">
+                <h5 className="text-center">CART TOTALS</h5>
+                <hr />
+                <div className="totals d-flex justify-content-around align-items-center">
+                <h6>Total</h6>
+                <h6>$ 21,400.00</h6>
                 </div>
+                <hr />
+                <button className="goCheckout">proceed to checkout</button>
               </div>
-            ))}
+            </div>
           </div>
-          <hr />
-          <h4 className="text-center">Total Cost: $ {price}</h4>
         </div>
       </div>
     </>

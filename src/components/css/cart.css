@@ -1,75 +1,20 @@
 .app__cart{
-    background: var(--secondary);
     font-family: poppins;
-    padding-top: 10vh;
-    padding-bottom: 20vh;
-    margin-top: 10vh;
+    margin-top: 30vh;
     margin-bottom: 8vh;
+    color: black;
 }
-.cart__item{
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 4vh;
-    box-shadow:  0px 2px 8px lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+.cart__img{
+    height: 100px;
 }
-/* .single__item{
-    margin: auto;
-} */
-
-.btn4{
-    background: var(--buttons);
+.card{
+    padding: 20px;
+    font-family: poppins;
+}
+.goCheckout{
     border: none;
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    border-radius: 3px;
-}
-.plus{
-    background: transparent !important;
-    color: var(--buttons) !important;
-}
-.minus{
-    background: transparent !important;
-    color: var(--buttons) !important;
-}
-/* .cart__quantity{
-    margin-top: 12px;
-} */
-.cart__name{
-    /* margin-top: 10vh; */
-    font-weight: 600;
-}
-.cart-price{
-    color: var(--buttons);
-    font-weight: 600;
-}
-.remove{
-    color: var(--buttons) !important;
-    background: transparent !important;
-}
-.card1{
-    background-color: white;
-    box-shadow: 0px 1px 14px 1px lightgray;
-    margin-top: 20vh;
-    padding: 20px !important;
-    position: fixed !important;
-    margin-bottom: 10vh !important;
-}
-.btn0{
-    background: var(--buttons);
-    border: none;
+    background: #FBAB30;
     color: white;
-    width: 100%;
-    padding: 4px;
-    border-radius: 4px;
-    margin-top: 8vh;
-}
-.checkout{
-    margin-top: 3vh;
+    text-transform: uppercase;
+    padding: 12px;
 }

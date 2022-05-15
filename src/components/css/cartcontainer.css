@@ -4,12 +4,7 @@
     font-family: poppins;
     margin-top: 100vh;
 }
-.card{
-    padding: 10px;
-    margin-bottom: 4vh;
-    height: 400px;
-    box-shadow: 0px 1px 14px 1px lightgray;
-}
+
 .item_img{
     height: 270px;
     width: 270px;
