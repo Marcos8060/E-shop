@@ -14,8 +14,8 @@ function Cart() {
           <p className="text-center mb-4">Your shopping cart</p>
           <div className="row">
             <div className="col-md-8">
-              <table class="table table-bordered text-center">
-                <thead class="schema-names">
+              <table className="table table-bordered text-center">
+                <thead className="schema-names">
                   <tr className="heads">
                     <th scope="col" class="fw-bold">
                       PRODUCT NAME
@@ -37,15 +37,15 @@ function Cart() {
                       <img className="img-fluid cart__img" src={bike} alt="" />
                       <span>Diamond Black</span>
                     </th>
-                    <td class="fw-normal data">$ 2,800</td>
-                    <td class="fw-normal">
+                    <td className="fw-normal data">$ 2,800</td>
+                    <td className="fw-normal">
                     <div>
                       <button className="increaseCartBtn">-</button>
                       <button className="increaseCartBtn">0</button>
                       <button className="increaseCartBtn">+</button>
                     </div>
                     </td>
-                    <td class="fw-normal">$ 7900</td>
+                    <td className="fw-normal">$ 7900</td>
                   </tr>
                 </tbody>
                 <tbody>
@@ -54,15 +54,15 @@ function Cart() {
                       <img className="img-fluid cart__img" src={bike} alt="" />
                       <span>Diamond Black</span>
                     </th>
-                    <td class="fw-normal data">$ 2,800</td>
-                    <td class="fw-normal">
+                    <td className="fw-normal data">$ 2,800</td>
+                    <td className="fw-normal">
                     <div>
                       <button className="increaseCartBtn">-</button>
                       <button className="increaseCartBtn">0</button>
                       <button className="increaseCartBtn">+</button>
                     </div>
                     </td>
-                    <td class="fw-normal">$ 7900</td>
+                    <td className="fw-normal">$ 7900</td>
                   </tr>
                 </tbody>
                 <tbody>
@@ -71,15 +71,15 @@ function Cart() {
                       <img className="img-fluid cart__img" src={bike} alt="" />
                       <span>Diamond Black</span>
                     </th>
-                    <td class="fw-normal data">$ 2,800</td>
-                    <td class="fw-normal">
+                    <td className="fw-normal data">$ 2,800</td>
+                    <td className="fw-normal">
                     <div>
                       <button className="increaseCartBtn">-</button>
                       <button className="increaseCartBtn">0</button>
                       <button className="increaseCartBtn">+</button>
                     </div>
                     </td>
-                    <td class="fw-normal">$ 7900</td>
+                    <td className="fw-normal">$ 7900</td>
                   </tr>
                 </tbody>
               </table>

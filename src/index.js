@@ -5,20 +5,23 @@ import App from "./App";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Cart from './components/Cart'
+import Cart from "./components/Cart";
+import Context from "./context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Router>
-    <React.StrictMode>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<App />}></Route>
-        <Route exact path="/cart" element={<Cart />}></Route>
-      </Routes>
-      <Footer />
-    </React.StrictMode>
-  </Router>
+  <Context>
+    <Router>
+      <React.StrictMode>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<App />}></Route>
+          <Route exact path="/cart" element={<Cart />}></Route>
+        </Routes>
+        <Footer />
+      </React.StrictMode>
+    </Router>
+  </Context>
 );
 
 // If you want to start measuring performance in your app, pass a function
