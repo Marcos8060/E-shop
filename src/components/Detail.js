@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import './css/detail.css'
+import "./css/detail.css";
 import { GlobalContext } from "../context";
 
 function Detail() {
-    const { state:{cart},dispatch} = GlobalContext();
-    console.log(cart)
+  const {
+    state: { cart },
+    dispatch,
+  } = GlobalContext();
+  console.log(cart);
   const { id } = useParams();
   const [item, setItem] = useState([]);
 
@@ -28,13 +31,15 @@ function Detail() {
           <div className="col-md-6">
             <h1 className="fw-bold item__name">{item.name}</h1>
             <p className="price">$ {item.price}</p>
-            <p className="text-uppercase text-muted">Category: {item.category}</p>
-            <p className="text-uppercase text-muted">Stock: {item.stock}</p>
-            <p className="text-uppercase text-muted">Delivery: {item.delivery}</p>
-            <hr />
-            <p className="text-muted">
-              {item.description}
+            <p className="text-uppercase text-muted">
+              Category: {item.category}
             </p>
+            <p className="text-uppercase text-muted">Stock: {item.stock}</p>
+            <p className="text-uppercase text-muted">
+              Delivery: {item.delivery}
+            </p>
+            <hr />
+            <p className="text-muted">{item.description}</p>
             <hr />
             <div className="item__footer">
               <div>
@@ -43,14 +48,31 @@ function Detail() {
                 <button className="increaseBtn">+</button>
               </div>
               <div>
-                <button  
-                onClick={() =>{
-                dispatch({
-                type: 'ADD_TO_CART',
-                payload: item
-                })
-                }}
-                className="addBtn">Add to cart</button>
+                {cart.some((p) => p.id === item.id) ? (
+                  <button
+                    onClick={() => {
+                      dispatch({
+                        type: "REMOVE",
+                        payload: item,
+                      });
+                    }}
+                    className="removeBtn"
+                  >
+                    Remove from cart
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {
+                      dispatch({
+                        type: "ADD_TO_CART",
+                        payload: item,
+                      });
+                    }}
+                    className="addBtn"
+                  >
+                    Add to cart
+                  </button>
+                )}
               </div>
             </div>
           </div>

@@ -6,10 +6,8 @@ import { Link } from "react-router-dom";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { GlobalContext } from "../context";
 
-function Navbar({ size, setShow }) {
-  const {
-    state: { cart },
-  } = GlobalContext();
+function Navbar() {
+  const { state: { cart },dispatch} = GlobalContext();
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef();
   navRef.current = navBackground;
@@ -85,7 +83,14 @@ function Navbar({ size, setShow }) {
                             <br />
                             <span>$ {item.price}</span>
                           </div>
-                          <DeleteIcon className="delete" />
+                          <DeleteIcon 
+                          onClick={()=>{
+                            dispatch({
+                              type: 'REMOVE',
+                              payload: item
+                            })
+                          }}
+                          className="delete" />
                         </div>
                         <hr />
                       </>
