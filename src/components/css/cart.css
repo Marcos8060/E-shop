@@ -1,11 +1,12 @@
 .app__cart{
     font-family: poppins;
-    margin-top: 30vh;
+    margin-top: 20vh;
     margin-bottom: 8vh;
     color: black;
 }
 .cart__img{
     height: 100px;
+    object-fit: contain;
 }
 .card{
     padding: 20px;
@@ -17,4 +18,15 @@
     color: white;
     text-transform: uppercase;
     padding: 12px;
+}
+.increaseCartBtn{
+    background: transparent;
+    border: 1px solid black;
+    padding: 2px 4px;
+    width: 40px;
+    margin: 4px;
+    font-weight: bold;
+}
+.total{
+    font-weight: bold;
 }

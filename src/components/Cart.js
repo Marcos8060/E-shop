@@ -38,7 +38,13 @@ function Cart() {
                       <span>Diamond Black</span>
                     </th>
                     <td class="fw-normal data">$ 2,800</td>
-                    <td class="fw-normal">marc@gmail.com</td>
+                    <td class="fw-normal">
+                    <div>
+                      <button className="increaseCartBtn">-</button>
+                      <button className="increaseCartBtn">0</button>
+                      <button className="increaseCartBtn">+</button>
+                    </div>
+                    </td>
                     <td class="fw-normal">$ 7900</td>
                   </tr>
                 </tbody>
@@ -49,7 +55,13 @@ function Cart() {
                       <span>Diamond Black</span>
                     </th>
                     <td class="fw-normal data">$ 2,800</td>
-                    <td class="fw-normal">marc@gmail.com</td>
+                    <td class="fw-normal">
+                    <div>
+                      <button className="increaseCartBtn">-</button>
+                      <button className="increaseCartBtn">0</button>
+                      <button className="increaseCartBtn">+</button>
+                    </div>
+                    </td>
                     <td class="fw-normal">$ 7900</td>
                   </tr>
                 </tbody>
@@ -60,7 +72,13 @@ function Cart() {
                       <span>Diamond Black</span>
                     </th>
                     <td class="fw-normal data">$ 2,800</td>
-                    <td class="fw-normal">marc@gmail.com</td>
+                    <td class="fw-normal">
+                    <div>
+                      <button className="increaseCartBtn">-</button>
+                      <button className="increaseCartBtn">0</button>
+                      <button className="increaseCartBtn">+</button>
+                    </div>
+                    </td>
                     <td class="fw-normal">$ 7900</td>
                   </tr>
                 </tbody>
@@ -72,7 +90,7 @@ function Cart() {
                 <hr />
                 <div className="totals d-flex justify-content-around align-items-center">
                 <h6>Total</h6>
-                <h6>$ 21,400.00</h6>
+                <h6 className="total">$ 21,400.00</h6>
                 </div>
                 <hr />
                 <button className="goCheckout">proceed to checkout</button>

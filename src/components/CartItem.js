@@ -13,7 +13,6 @@ function CartItem({ item, handleClick }) {
         <h5 className="fw-bolder">Yellow men's shoes</h5>
         <span className="price">$ 34</span>
         <button className="buyBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Buy now</button>
-          {/* <VisibilityIcon className="see" /> */}
       </div>
 
       {/* detail */}
@@ -49,9 +48,9 @@ function CartItem({ item, handleClick }) {
                   <p className="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis dignissimos recusandae quo fugiat reiciendis nemo accusantium, blanditiis sequi aperiam excepturi.</p>
                   <div className="item__footer">
                     <div>
-                      <button className="increaseBtn">+</button>
-                      <button className="increaseBtn">0</button>
                       <button className="increaseBtn">-</button>
+                      <button className="increaseBtn">0</button>
+                      <button className="increaseBtn">+</button>
                     </div>
                     <div>
                       <button className="addBtn">Add to cart</button>
