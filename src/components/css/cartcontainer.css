@@ -60,6 +60,9 @@
 }
 .price{
     color: var(--yellow);
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 500;
 }
 .increaseBtn{
     background: transparent;
@@ -85,4 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.item__name{
+    font-family: poppins;
 }

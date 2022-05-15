@@ -43,7 +43,7 @@ function CartItem({ item, handleClick }) {
                   <img className="img-fluid" src={bike} alt="" />
                 </div>
                 <div className="col-md-6 text-left">
-                  <h1 className="fw-bold">Light Brown Shoes</h1>
+                  <h1 className="fw-bold item__name">Light Brown Shoes</h1>
                   <p className="price">$ 40</p>
                   <hr />
                   <p className="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis dignissimos recusandae quo fugiat reiciendis nemo accusantium, blanditiis sequi aperiam excepturi.</p>
