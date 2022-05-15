@@ -34,9 +34,9 @@ function Navbar({ size, setShow }) {
           }}
         >
           <div className="container">
-            <a className="navbar-brand" onClick={() => setShow(true)}>
+            <Link to='/' className="navbar-brand">
               <h1 className="logo">Bike</h1>
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -52,40 +52,7 @@ function Navbar({ size, setShow }) {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Categories
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
-                  >
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li className="nav-item dropdown">
                   <a
@@ -141,6 +108,11 @@ function Navbar({ size, setShow }) {
                         <span>$ 40</span>
                       </div>
                       <DeleteIcon className="delete" />
+                    </div>
+                    <hr />
+                    <div className=" total1 d-flex justify-content-between align-items-center">
+                      <p>Total</p>
+                      <p>$ 20300</p>
                     </div>
                     <hr />
                     <button className="btn9">Go to cart</button>
