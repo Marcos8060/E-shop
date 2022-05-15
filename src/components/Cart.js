@@ -118,7 +118,7 @@ function Cart() {
                   <h6 className="total">$ {total}</h6>
                 </div>
                 <hr />
-                <button className="goCheckout">proceed to checkout</button>
+                <Link to='/checkout' className="goCheckout text-decoration-none text-center">proceed to checkout</Link>
               </div>
             </div>
           </div>

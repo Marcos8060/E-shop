@@ -1,0 +1,17 @@
+.app__checkout{
+    margin-top: 20vh;
+}
+.checkout__img{
+    height: 70px;
+}
+.payment{
+    border: none;
+    background: var(--yellow);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.form-control:focus{
+    box-shadow: none;
+}
