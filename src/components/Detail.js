@@ -25,10 +25,14 @@ function Detail() {
           <div className="col-md-6">
             <h1 className="fw-bold item__name">{item.name}</h1>
             <p className="price">$ {item.price}</p>
+            <p className="text-uppercase text-muted">Category: {item.category}</p>
+            <p className="text-uppercase text-muted">Stock: {item.stock}</p>
+            <p className="text-uppercase text-muted">Delivery: {item.delivery}</p>
             <hr />
             <p className="text-muted">
               {item.description}
             </p>
+            <hr />
             <div className="item__footer">
               <div>
                 <button className="increaseBtn">-</button>
