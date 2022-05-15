@@ -44,7 +44,19 @@ function CartItem({ item, handleClick }) {
                 </div>
                 <div className="col-md-6 text-left">
                   <h1 className="fw-bold">Light Brown Shoes</h1>
+                  <p className="price">$ 40</p>
+                  <hr />
                   <p className="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis dignissimos recusandae quo fugiat reiciendis nemo accusantium, blanditiis sequi aperiam excepturi.</p>
+                  <div className="item__footer">
+                    <div>
+                      <button className="increaseBtn">+</button>
+                      <button className="increaseBtn">0</button>
+                      <button className="increaseBtn">-</button>
+                    </div>
+                    <div>
+                      <button className="addBtn">Add to cart</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

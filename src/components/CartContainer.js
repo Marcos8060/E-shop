@@ -3,36 +3,7 @@ import "./css/cartcontainer.css";
 import axios from "axios";
 import CartItem from "./CartItem";
 
-const url = "https://marcos-shop.herokuapp.com/api/items/";
-function CartContainer({ handleClick }) {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    axios
-      .get(url)
-      .then((res) => {
-        setItems(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err.response.status);
-        console.log(err.response.data);
-      });
-  }, []);
-
-  if (loading) {
-    return (
-      <>
-        <div className="text-center py-4">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden text-center">Loading...</span>
-          </div>
-        </div>
-      </>
-    );
-  }
+function CartContainer() {
 
   return (
     <>
