@@ -5,7 +5,7 @@ import bike from "../images/bike3.png";
 import { Link } from "react-router-dom";
 
 function CartItem({ item}) {
-  const { id, image, name, price, amount } = item;
+  const { id, image, name, price } = item;
 
   return (
     <>

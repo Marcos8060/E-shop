@@ -1,9 +1,49 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import './css/detail.css'
 
 function Detail() {
+  const { id } = useParams();
+  const [item, setItem] = useState([]);
+
+  const url = `http://127.0.0.1:8000/api/items/${id}/`;
+
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setItem(res.data);
+    });
+  }, []);
+
   return (
-    <div>Detail</div>
-  )
+    <div className="app__detail">
+      <div className="container">
+        <div className="row detail__product">
+          <div className="col-md-6">
+            <img className="img-fluid" src={item.image} alt={item.name} />
+          </div>
+          <div className="col-md-6">
+            <h1 className="fw-bold item__name">{item.name}</h1>
+            <p className="price">$ {item.price}</p>
+            <hr />
+            <p className="text-muted">
+              {item.description}
+            </p>
+            <div className="item__footer">
+              <div>
+                <button className="increaseBtn">-</button>
+                <button className="increaseBtn">0</button>
+                <button className="increaseBtn">+</button>
+              </div>
+              <div>
+                <button className="addBtn">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Detail
+export default Detail;

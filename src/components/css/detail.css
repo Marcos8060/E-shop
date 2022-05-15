@@ -1,31 +1,6 @@
 .app__detail{
-    background: var(--secondary);
     padding-top: 10vh;
     padding-bottom: 17vh;
     font-family: poppins;
     margin-top: 10vh;
-}
-.title{
-    font-weight: 700;
-}
-.star{
-    color: #FAB031 !important;
-    background: transparent !important;
-}
-.price{
-    color: var(--buttons);
-    font-weight: 600;
-}
-.btn3{
-    border: none;
-    background: var(--buttons);
-    color: white;
-    font-weight: 400;
-    padding: 7px;
-    border-radius: 4px;
-}
-.detail-img{
-    background: white;
-    height: 300px;
-    border-radius: 10px;
 }
