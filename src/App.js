@@ -3,6 +3,7 @@ import './App.css';
 import Hero from './components/Hero';
 import CartContainer from './components/CartContainer'
 import Special from './components/Special';
+import Random from './components/Random';
 
 
 
@@ -12,6 +13,7 @@ function App() {
     <>
     <Hero />
     <CartContainer />
+    <Random />
     <Special />
     </>
   );
