@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import CartContainer from './components/CartContainer'
 import Special from './components/Special';
 import Random from './components/Random';
+import Acessory from './components/Acessory';
 
 
 
@@ -15,6 +16,7 @@ function App() {
     <CartContainer />
     <Random />
     <Special />
+    <Acessory />
     </>
   );
 }

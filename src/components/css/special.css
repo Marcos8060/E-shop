@@ -1,7 +1,7 @@
 .app__special{
-    /* background: #F5F5F5; */
-    margin-top: 17vh;
-    margin-bottom: 17vh;
+    background: #F5F5F5;
+    padding-top: 14vh;
+    padding-bottom: 14vh;
     font-family: Nunito;
 }
 .count{

@@ -10,6 +10,8 @@ import Context from "./context";
 import Detail from "./components/Detail";
 import Checkout from "./components/Checkout";
 import Payment from "./components/Payment";
+import Acessory from "./components/Acessory";
+import Adetail from "./components/Adetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +23,7 @@ root.render(
           <Route exact path="/" element={<App />}></Route>
           <Route exact path="/cart" element={<Cart />}></Route>
           <Route exact path="/product/:id/" element={<Detail />}></Route>
+          <Route exact path="/accessory/:id/" element={<Adetail />}></Route>
           <Route exact path="/checkout" element={<Checkout />}></Route>
           <Route exact path="/payment" element={<Payment />}></Route>
         </Routes>

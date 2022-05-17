@@ -30,3 +30,10 @@
 .navbar.colorChange{
   background-color: #000;
 }
+.last__img{
+  height: 200px;
+}
+.app__accessory{
+  margin-top: 8vh;
+  font-family: Nunito;
+}
