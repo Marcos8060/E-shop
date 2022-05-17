@@ -84,7 +84,11 @@
     color: white;
     transition: .4s;
 }
-
+.item__footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .item__name{
     font-family: poppins;
 }

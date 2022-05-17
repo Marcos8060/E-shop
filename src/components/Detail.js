@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import "./css/detail.css";
 import { GlobalContext } from "../context";
+import { Link } from "react-router-dom";
 
 function Detail() {
   const {
@@ -46,6 +47,9 @@ function Detail() {
                 {/* <button className="increaseBtn">-</button>
                 <button className="increaseBtn">0</button>
                 <button className="increaseBtn">+</button> */}
+                <Link to='/' className="addBtn text-decoration-none m-2">
+                    Continue Shopping
+                  </Link>
               </div>
               <div>
                 {cart.some((p) => p.id === item.id) ? (
