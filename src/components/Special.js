@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './css/special.css'
 import axios from 'axios'
+import { GlobalContext } from '../context'
 
 const url = 'http://127.0.0.1:8000/api/special/1/'
 function Special() {
     const [item,setItem] = useState([])
+    const {state:{cart},dispatch} = GlobalContext();
 
     useEffect(() =>{
         axios.get(url)
@@ -35,6 +37,36 @@ function Special() {
                         </div>
                     </div>
                 <hr />
+                <h4>{item.name}</h4>
+                <h4 className='price'>$ {item.price}</h4>
+                <hr />
+                <p>{item.description}</p>
+                <hr />
+                {cart.some((p) => p.id === item.id) ? (
+                  <button
+                    onClick={() => {
+                      dispatch({
+                        type: "REMOVE",
+                        payload: item,
+                      });
+                    }}
+                    className="removeBtn"
+                  >
+                    Remove from cart
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {
+                      dispatch({
+                        type: "ADD_TO_CART",
+                        payload: item,
+                      });
+                    }}
+                    className="addBtn"
+                  >
+                    Add to cart
+                  </button>
+                )}
                 </div>
             </div>
         </div>
