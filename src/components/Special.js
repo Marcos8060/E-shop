@@ -19,7 +19,7 @@ function Special() {
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                    <img className='img-fluid' src={item.image} alt="" />
+                    <img className='img-fluid mb-4' src={item.image} alt="" />
                 </div>
                 <div className="col-md-6">
                     <div className="d-flex justify-content-around align-items-center">
