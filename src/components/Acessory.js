@@ -15,6 +15,7 @@ function Acessory() {
     <div className="app__accessory">
       <div className="container-fluid">
         <div className="row">
+            <h3 className="mb-4 accessory">Bycicle Accessories</h3>
           {items.map((item) => (
             <div className="col-md-3 text-center mb-4" key={item.id}>
               <img className="img-fluid last__img" src={item.image} alt="" />
