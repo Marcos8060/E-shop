@@ -9,6 +9,7 @@ import Cart from "./components/Cart";
 import Context from "./context";
 import Detail from "./components/Detail";
 import Checkout from "./components/Checkout";
+import Payment from "./components/Payment";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
           <Route exact path="/cart" element={<Cart />}></Route>
           <Route exact path="/product/:id/" element={<Detail />}></Route>
           <Route exact path="/checkout" element={<Checkout />}></Route>
+          <Route exact path="/payment" element={<Payment />}></Route>
         </Routes>
         <Footer />
       </React.StrictMode>
