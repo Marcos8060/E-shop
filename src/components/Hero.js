@@ -21,6 +21,8 @@ function Hero() {
                   data-bs-toggle="modal"
                   data-bs-target="#videoModal"
                 />
+                <br />
+                <small className="play">Watch video</small>
               </div>
             </div>
           </div>
