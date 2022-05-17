@@ -43,25 +43,6 @@ function Detail() {
             <hr />
             <div className="item__footer">
               <div>
-                <select
-                  onChange={(e) =>
-                    dispatch({
-                      type: "CHANGE_CART_QTY",
-                      payload: {
-                        id: item.id,
-                        qty: e.target.value,
-                      },
-                    })
-                  }
-                  class="form-select"
-                  aria-label=".form-select-sm example"
-                >
-                  <option selected>Select quantity</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
                 {/* <button className="increaseBtn">-</button>
                 <button className="increaseBtn">0</button>
                 <button className="increaseBtn">+</button> */}
