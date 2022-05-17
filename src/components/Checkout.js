@@ -23,6 +23,8 @@ function Checkout() {
       }
     }
 
+    const disableButton = !fullName || !email || !location
+
   useEffect(() => {
     setTotal(
       cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
@@ -33,11 +35,8 @@ function Checkout() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-             <div className="alertMessage">
-              {alert}
-             </div>
             <div className="card mb-4">
-              <h5>Shipping Details</h5>
+            <h5>Shipping Details</h5>
               <form className="needs-validation">
                 <input
                   onChange={(e) => setFullName(e.target.value)}
@@ -69,7 +68,7 @@ function Checkout() {
                   placeholder="shipping instructions"
                   required
                 ></textarea>
-                <button onClick={handleShipping} className="payment">Submit</button>
+                <button disabled={disableButton} onClick={handleShipping} className="payment">Submit</button>
               </form>
 
             </div>
