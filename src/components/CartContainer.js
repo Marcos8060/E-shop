@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./css/cartcontainer.css";
 import CartItem from "./CartItem";
 import { GlobalContext } from "../context";
+import LoadingSpin from "react-loading-spin";
+
 
 function CartContainer() {
   const { loading,products,productState:{sort}} = GlobalContext();
@@ -20,7 +22,16 @@ function CartContainer() {
   if(loading){
     return(
       <div className="loading">
-        Loading...
+          <LoadingSpin
+            duration="2s"
+            width="15px"
+            timingFunction="ease-in-out"
+            direction="alternate"
+            size="130px"
+            primaryColor="yellow"
+            secondaryColor="#333"
+            numberOfRotationsInAnimation={2}
+        />
       </div>
     )
   }

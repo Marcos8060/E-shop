@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../context";
+import LoadingSpin from "react-loading-spin";
+
 
 const url = "http://127.0.0.1:8000/api/accessory/";
 function Acessory() {
@@ -17,7 +19,16 @@ function Acessory() {
   if(loading){
     return (
       <div className="loading3">
-        Loading...
+        <LoadingSpin
+            duration="2s"
+            width="15px"
+            timingFunction="ease-in-out"
+            direction="alternate"
+            size="80px"
+            primaryColor="yellow"
+            secondaryColor="#333"
+            numberOfRotationsInAnimation={2}
+        />
       </div>
     )
   }

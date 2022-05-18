@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './css/special.css'
 import axios from 'axios'
 import { GlobalContext } from '../context'
+import LoadingSpin from "react-loading-spin";
+
 
 const url = 'http://127.0.0.1:8000/api/special/1/'
 function Special() {
@@ -18,7 +20,16 @@ function Special() {
     if(loading){
       return(
         <div className='loading2'>
-          Loading...
+          <LoadingSpin
+            duration="2s"
+            width="15px"
+            timingFunction="ease-in-out"
+            direction="alternate"
+            size="80px"
+            primaryColor="yellow"
+            secondaryColor="#333"
+            numberOfRotationsInAnimation={2}
+        />
         </div>
       )
     }
