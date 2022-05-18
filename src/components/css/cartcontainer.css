@@ -37,8 +37,8 @@
     background: transparent !important;
 }
 .filters{
-    background: #181B1F;
-    color: white;
+    /* background: #181B1F; */
+    /* color: white; */
     padding: 10px;
     margin-bottom: 3vh;
 }

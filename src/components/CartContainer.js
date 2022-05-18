@@ -6,7 +6,7 @@ import LoadingSpin from "react-loading-spin";
 
 
 function CartContainer() {
-  const { loading,products,productState:{sort}} = GlobalContext();
+  const { loading,products,productState:{sort},productDispatch} = GlobalContext();
 
   const transformProducts = () =>{
     let sortedProducts = products
@@ -46,12 +46,28 @@ function CartContainer() {
           </p>
           <div className="row">
             <div className="col-md-3 filters">
-              <h3 className="text-center">Select by Category</h3>
+              <h3 className="text-center">Filter by Category</h3>
               <ul className="list-group">
                 <li className="list-group-item">Ladies</li>
                 <li className="list-group-item">Gents</li>
-                <li className="list-group-item">Descending</li>
-                <li className="list-group-item">Ascending</li>
+                <li 
+                onClick={()=>
+                  productDispatch({
+                    type: "SORT_BY_PRICE",
+                    payload: "highToLow"
+                  })
+                }
+                className="list-group-item"
+                >Descending price</li>
+                <li 
+                onClick={()=>
+                  productDispatch({
+                    type: "SORT_BY_PRICE",
+                    payload: "lowToHigh"
+                  })
+                }
+                className="list-group-item"
+                >Ascending price</li>
               </ul>
             </div>
             {transformProducts().map((item) =>(
