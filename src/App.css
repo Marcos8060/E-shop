@@ -40,4 +40,9 @@
 .accessory{
   font-family: poppins;
   font-weight: bold;
+  margin-bottom: 10vh;
+}
+.loading3{
+  text-align: center;
+  margin-top: 20vh;
 }

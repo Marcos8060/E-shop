@@ -6,7 +6,7 @@ import { GlobalContext } from '../context'
 const url = 'http://127.0.0.1:8000/api/special/1/'
 function Special() {
     const [item,setItem] = useState([])
-    const {state:{cart},dispatch} = GlobalContext();
+    const {state:{cart},dispatch,loading} = GlobalContext();
 
     useEffect(() =>{
         axios.get(url)
@@ -14,6 +14,14 @@ function Special() {
             setItem(res.data)
         })
     },[])
+
+    if(loading){
+      return(
+        <div className='loading2'>
+          Loading...
+        </div>
+      )
+    }
   return (
     <div className='app__special'>
         <div className="container">

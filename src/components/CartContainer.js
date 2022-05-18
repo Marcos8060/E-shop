@@ -1,11 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "./css/cartcontainer.css";
-import axios from "axios";
 import CartItem from "./CartItem";
 import { GlobalContext } from "../context";
 
 function CartContainer() {
-  const { products} = GlobalContext();
+  const { loading,products,productState:{sort}} = GlobalContext();
+
+  const transformProducts = () =>{
+    let sortedProducts = products
+
+    if(sort){
+      sortedProducts = sortedProducts.sort((a,b) =>{
+        return sort === 'lowToHigh' ? a.price - b.price : b.price - a.price
+      })
+    }
+    return sortedProducts;
+  }
+
+  if(loading){
+    return(
+      <div className="loading">
+        Loading...
+      </div>
+    )
+  }
 
   return (
     <>
@@ -25,7 +43,7 @@ function CartContainer() {
                 <li className="list-group-item">Ascending</li>
               </ul>
             </div>
-            {products.map((item) =>(
+            {transformProducts().map((item) =>(
               <div className="col-md-3 product text-center" key={item.id}>
                <CartItem  item={item}/>
               </div>

@@ -92,3 +92,7 @@
 .item__name{
     font-family: poppins;
 }
+.loading{
+    margin-top: 100vh;
+    padding-top: 20vh;
+}

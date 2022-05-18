@@ -19,3 +19,16 @@ export const reducer = (state,action) =>{
         return state
     }
 }
+
+export const productReducer =(state,action)=>{
+    switch (action.type) {
+        case 'SORT_BY_PRICE':
+            return{
+                ...state,
+                sort: action.payload
+            }
+    
+        default:
+            return state;
+    }
+}
