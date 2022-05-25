@@ -5,7 +5,7 @@ import { GlobalContext } from "../context";
 import LoadingSpin from "react-loading-spin";
 
 
-const url = "http://127.0.0.1:8000/api/accessory/";
+const url = "https://marcos-shop.herokuapp.com/api/accessory/";
 function Acessory() {
   const [items, setItems] = useState([]);
   const { loading } = GlobalContext();

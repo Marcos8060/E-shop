@@ -3,7 +3,7 @@ import axios from 'axios'
 import { reducer } from './reducer';
 import { productReducer } from './reducer';
 
-const url = 'http://127.0.0.1:8000/api/items/'
+const url = 'https://marcos-shop.herokuapp.com/api/items/'
 
 const CartContext = createContext();
 

@@ -27,7 +27,7 @@ function CartContainer() {
             width="15px"
             timingFunction="ease-in-out"
             direction="alternate"
-            size="130px"
+            size="100px"
             primaryColor="yellow"
             secondaryColor="#333"
             numberOfRotationsInAnimation={2}
@@ -48,9 +48,8 @@ function CartContainer() {
             <div className="col-md-3 filters">
               <h3 className="text-center">Filter by Category</h3>
               <ul className="list-group">
-                <li className="list-group-item">Ladies</li>
-                <li className="list-group-item">Gents</li>
                 <li 
+                style={{ cursor: 'pointer'}}
                 onClick={()=>
                   productDispatch({
                     type: "SORT_BY_PRICE",
@@ -60,6 +59,7 @@ function CartContainer() {
                 className="list-group-item"
                 >Descending price</li>
                 <li 
+                style={{ cursor: 'pointer'}}
                 onClick={()=>
                   productDispatch({
                     type: "SORT_BY_PRICE",

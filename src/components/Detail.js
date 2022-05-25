@@ -14,7 +14,7 @@ function Detail() {
   const { id } = useParams();
   const [item, setItem] = useState([]);
 
-  const url = `http://127.0.0.1:8000/api/items/${id}/`;
+  const url = `https://marcos-shop.herokuapp.com/api/items/${id}/`;
 
   useEffect(() => {
     axios.get(url).then((res) => {
